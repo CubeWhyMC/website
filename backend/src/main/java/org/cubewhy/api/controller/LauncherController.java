@@ -34,7 +34,7 @@ public class LauncherController {
     public void metadata(HttpServletRequest request, @NotNull HttpServletResponse response) throws IOException {
         response.setContentType("application/json;charset=UTF-8");
         // Get <configDir>/metadata.json
-        String json = utils.readAll(fileUtils.getExternalFile(configPath + "/api/metadata.json"));
+        String json = utils.readAll(fileUtils.getExternalFile(configPath + "/metadata.json"));
         response.getWriter().write(json);
     }
 

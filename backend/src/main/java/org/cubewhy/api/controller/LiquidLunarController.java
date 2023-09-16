@@ -26,7 +26,7 @@ public class LiquidLunarController {
     public void servers(HttpServletResponse response) throws IOException {
         response.setContentType("application/json;charset=UTF-8");
         // Get <configDir>/liquid-lunar/metadata.json
-        String json = utils.readAll(fileUtils.getExternalFile(liquidLunarFolder + "/api/metadata.json"));
+        String json = utils.readAll(fileUtils.getExternalFile(liquidLunarFolder + "/metadata.json"));
         response.getWriter().write(RestBean.success(JSONObject.parse(json)).toJson());
     }
 }

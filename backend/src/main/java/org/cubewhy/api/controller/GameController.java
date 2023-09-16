@@ -24,7 +24,7 @@ public class GameController {
 
     @GetMapping("metadata")
     public void metadata(@NotNull HttpServletResponse response) throws IOException {
-        String json = utils.readAll(fileUtils.getExternalFile(configPath + "/api/game-metadata.json"));
+        String json = utils.readAll(fileUtils.getExternalFile(configPath + "/game-metadata.json"));
         response.setContentType("application/json;charset=UTF-8");
         response.getWriter().write(json);
     }
