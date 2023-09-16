@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  security:
+    jwt:
+      key: abc-def
+      expire: 7
+  datasource:
+    url: jdbc:mysql://localhost:3306/api
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-type: PKCS12
+    key-alias: tomcat
+    key-store-password: 123456
+pay:
+  unknown: https://donate.lunarcn.top
+  wechat: wxp://f2f0YKOmPCTeVwg5tn9YA3Q2Z9TR913RhMVMnIDLIlVMJoAZhFUuwBIYQ0j55-warxH6
+  qq: https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ0reRgQQYtZuypgZCIGUwMDJlYzkxZGRjNmU0MmY2ZjRjYjQzYzE1MzQxMGNl_xxx_sign&u=1076124626&n=%E9%B8%AD%E7%9A%87
+  alipay: https://qr.alipay.com/fkx18137340fgmxjyuvapc8
+api:
+  redirectLaunch: https://api.lunarclientprod.com/launcher/launch
+  error: "{\"success\": false, \"error\":  {\"short\":  \"%title%\", \"message\":  \"%msg%\", \"code\": \"%code%\"}}"

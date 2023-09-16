@@ -1,0 +1,1089 @@
+{
+  "versions": [
+    {
+      "id": "1.8",
+      "name": "The Bountiful Update",
+      "description": "The \"Bountiful Update\" is the name given to the release of version 1.8 on September 2nd, 2014. This update includes many new features such as a unique underwater dungeon, new mobs such as endermites, guardians, elder guardians, and rabbits. This update also included the introduction of armour stands and many enhancements to skins, such as the Alex model and jacket layers.",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_8-1.png",
+          "title": "New adventure experiences"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_8-2.png",
+          "title": "New alex skin model"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_8-3.png",
+          "title": "Expansive community servers"
+        }
+      ],
+      "default": true,
+      "releaseDate": "2014-09-02",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_8.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_8.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_8.png"
+      },
+      "subversions": [
+        {
+          "id": "1.8.9",
+          "default": true,
+          "snapshot": false,
+          "assets": {
+            "sha1": "f6ad102bcaa53b1a58358f16e376d548d44933ec",
+            "url": "https://launchermeta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json",
+            "id": "1.8"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": true,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "forge",
+              "default": false,
+              "name": "Lunar + Forge",
+              "description": "Lunar bundled with the Forge mod loader and a selection of Forge mods. Some of these mods included are OptiFine, Replay Mod, NotEnoughUpdates, and SkyblockAddons.",
+              "credits": null,
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/forge.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.20",
+      "name": "The Trails & Tales Update",
+      "description": "The “Trails & Tales Update” is the name given to the release of version 1.20 on June 7th, 2023. The update introduces a variety of new content including: new biomes, structures, and creatures such as the Cherry Grove biome, the Trail Ruins structure, and creatures such as the Sniffer and Camel. This update also includes new Smithing tables, allowing users to customize their armor trims!",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_20-1.png",
+          "title": "New camel and sniffer mobs"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_20-2.png",
+          "title": "New Cherry Blossom biome"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_20-3.png",
+          "title": "New default skins"
+        }
+      ],
+      "default": false,
+      "releaseDate": "2023-07-06",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_20.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_20.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_20.png"
+      },
+      "subversions": [
+        {
+          "id": "1.20.1",
+          "default": true,
+          "snapshot": true,
+          "assets": {
+            "sha1": "0e20dc78553f6850535c579b751f5758d0969a39",
+            "url": "https://piston-meta.mojang.com/v1/packages/0e20dc78553f6850535c579b751f5758d0969a39/5.json",
+            "id": "5"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "fabric",
+              "default": true,
+              "name": "Lunar + Fabric",
+              "description": "Lunar bundled with the Fabric mod loader and a selection of Fabric mods. Some of these mods included are Sodium, Iris, Phosphor, Noxesium, Replay Mod, and Indium.",
+              "credits": null,
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/fabric.png"
+            }
+          ]
+        },
+        {
+          "id": "1.20",
+          "default": false,
+          "snapshot": true,
+          "assets": {
+            "sha1": "0e20dc78553f6850535c579b751f5758d0969a39",
+            "url": "https://piston-meta.mojang.com/v1/packages/0e20dc78553f6850535c579b751f5758d0969a39/5.json",
+            "id": "5"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "sodium",
+              "default": true,
+              "name": "Lunar + Sodium (Beta)",
+              "description": "Lunar bundled with Fabric, Sodium, and Iris. Sodium and Iris are patched by Lunar to ensure compatibility.",
+              "credits": "CaffeineMC (Sodium), coderbot (Iris)",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/sodium.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.19",
+      "name": "The Wild Update",
+      "description": "The “Wild Update” is the name given to the release of version 1.19 on June 7th, 2022. The update introduces a variety of new content including: brand-new locations, materials, and blocks such as the Deep Dark and Mangrove biomes; ancient cities; mobs like the warden, the frog, the tadpole, and the allay, as well as new items obtainable only in these new biomes.",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_19-1.png",
+          "title": "New helper mob allay"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_19-2.png",
+          "title": "Mud found in swamps"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_19-3.png",
+          "title": "New ancient city structure"
+        }
+      ],
+      "default": false,
+      "releaseDate": "2022-07-06",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_19.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_19.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_19.png"
+      },
+      "subversions": [
+        {
+          "id": "1.19.3",
+          "default": false,
+          "snapshot": false,
+          "assets": {
+            "sha1": "867b2cdb161e608b52c13aff2c1d95d274a206ed",
+            "url": "https://piston-meta.mojang.com/v1/packages/867b2cdb161e608b52c13aff2c1d95d274a206ed/2.json",
+            "id": "2"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "sodium",
+              "default": true,
+              "name": "Lunar + Sodium (Beta)",
+              "description": "Lunar bundled with Fabric, Sodium, and Iris. Sodium and Iris are patched by Lunar to ensure compatibility.",
+              "credits": "CaffeineMC (Sodium), coderbot (Iris)",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/sodium.png"
+            }
+          ]
+        },
+        {
+          "id": "1.19.4",
+          "default": true,
+          "snapshot": false,
+          "assets": {
+            "sha1": "c45a2a931fd378eac4269b2274edc41df007d1c9",
+            "url": "https://piston-meta.mojang.com/v1/packages/c45a2a931fd378eac4269b2274edc41df007d1c9/3.json",
+            "id": "3"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "fabric",
+              "default": true,
+              "name": "Lunar + Fabric",
+              "description": "Lunar bundled with the Fabric mod loader and a selection of Fabric mods. Some of these mods included are Sodium, Iris, Phosphor, Noxesium, Replay Mod, and Indium.",
+              "credits": null,
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/fabric.png"
+            }
+          ]
+        },
+        {
+          "id": "1.19.2",
+          "default": false,
+          "snapshot": false,
+          "assets": {
+            "sha1": "a9c8b05a8082a65678beda6dfa2b8f21fa627bce",
+            "url": "https://piston-meta.mojang.com/v1/packages/a9c8b05a8082a65678beda6dfa2b8f21fa627bce/1.19.json",
+            "id": "1.19"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "sodium",
+              "default": true,
+              "name": "Lunar + Sodium (Beta)",
+              "description": "Lunar bundled with Fabric, Sodium, and Iris. Sodium and Iris are patched by Lunar to ensure compatibility.",
+              "credits": "CaffeineMC (Sodium), coderbot (Iris)",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/sodium.png"
+            }
+          ]
+        },
+        {
+          "id": "1.19",
+          "default": false,
+          "snapshot": false,
+          "assets": {
+            "sha1": "a9c8b05a8082a65678beda6dfa2b8f21fa627bce",
+            "url": "https://piston-meta.mojang.com/v1/packages/a9c8b05a8082a65678beda6dfa2b8f21fa627bce/1.19.json",
+            "id": "1.19"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": true,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.18",
+      "name": "The Caves & Cliffs: Part II Update",
+      "description": "The \"Caves & Cliffs: Part II Update\" is the name given to the release of version 1.18 on November 30th, 2021. This update finalized the overhaul of the overworld generation started in \"Part I\", with enormous caves, taller mountains, and many new biomes. This update also changed the height and depth of the world, allowing for some spectacular mountains and vast cave systems.",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_18-1.png",
+          "title": "New music disc called otherside"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_18-2.png",
+          "title": "Increased world height and depth"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_18-3.png",
+          "title": "A new variety of plants found in caves"
+        }
+      ],
+      "default": false,
+      "releaseDate": "2021-11-30",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_18.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_18.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_18.png"
+      },
+      "subversions": [
+        {
+          "id": "1.18.2",
+          "default": true,
+          "snapshot": false,
+          "assets": {
+            "sha1": "d31a2e85ae149dd1b1a7070b22cb8887892fda6c",
+            "url": "https://piston-meta.mojang.com/v1/packages/d31a2e85ae149dd1b1a7070b22cb8887892fda6c/1.18.json",
+            "id": "1.18"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "fabric",
+              "default": true,
+              "name": "Lunar + Fabric",
+              "description": "Lunar bundled with the Fabric mod loader and a selection of Fabric mods. Some of these mods included are Sodium, Iris, Phosphor, Noxesium, Replay Mod, and Indium.",
+              "credits": null,
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/fabric.png"
+            }
+          ]
+        },
+        {
+          "id": "1.18.1",
+          "default": false,
+          "snapshot": false,
+          "assets": {
+            "sha1": "d31a2e85ae149dd1b1a7070b22cb8887892fda6c",
+            "url": "https://piston-meta.mojang.com/v1/packages/d31a2e85ae149dd1b1a7070b22cb8887892fda6c/1.18.json",
+            "id": "1.18"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": true,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.17",
+      "name": "The Caves & Cliffs: Part I Update",
+      "description": "The \"Caves & Cliffs: Part I Update\" is the name given to the release of version 1.17 on June 8th, 2021. This update started with changes made in world generation such as mountains, caves, ore veins, mineshafts, and strongholds. It also introduced many new biomes and mobs. These mobs include goats, axolotls, and the community-voted glow squid! The biome additions include Dripstone Caves, Lush Caves, and six new sub-biomes.",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_17-1.png",
+          "title": "New underwater animals"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_17-2.png",
+          "title": "A variety of new plants"
+        }
+      ],
+      "default": false,
+      "releaseDate": "2021-08-07",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_17.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_17.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_17.png"
+      },
+      "subversions": [
+        {
+          "id": "1.17.1",
+          "default": true,
+          "snapshot": false,
+          "assets": {
+            "sha1": "f425401a00adf0112fde624ee80c66333530f8a1",
+            "url": "https://piston-meta.mojang.com/v1/packages/f425401a00adf0112fde624ee80c66333530f8a1/1.17.json",
+            "id": "1.17"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "fabric",
+              "default": true,
+              "name": "Lunar + Fabric",
+              "description": "Lunar bundled with the Fabric mod loader and a selection of Fabric mods. Some of these mods included are Sodium, Iris, Phosphor, Noxesium, Replay Mod, and Indium.",
+              "credits": null,
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/fabric.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.16",
+      "name": "The Nether Update",
+      "description": "The \"Nether Update\" is the name given to the release of version 1.16 on June 23rd, 2020. Hence the name; this update changed many things about the Nether, including new biomes, new mobs, and generated structures. The new biomes include Crimson and Warped Forests, Soul Sand Valley, and Basalt Deltas. The new mobs include the Piglin, Strider, Zoglin, Hoglin, and Piglin Brute.",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_16-1.png",
+          "title": "The addition of netherite"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_16-2.png",
+          "title": "New music disc called pigstep"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_16-3.png",
+          "title": "New piglin and hoglin mobs"
+        }
+      ],
+      "default": false,
+      "releaseDate": "2020-06-23",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_16.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_16.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_16.png"
+      },
+      "subversions": [
+        {
+          "id": "1.16.5",
+          "default": true,
+          "snapshot": false,
+          "assets": {
+            "sha1": "f3c4aa96e12951cd2781b3e1c0e8ab82bf719cf2",
+            "url": "https://piston-meta.mojang.com/v1/packages/f3c4aa96e12951cd2781b3e1c0e8ab82bf719cf2/1.16.json",
+            "id": "1.16"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": false,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "fabric",
+              "default": true,
+              "name": "Lunar + Fabric",
+              "description": "Lunar bundled with the Fabric mod loader and a selection of Fabric mods. Some of these mods included are Sodium, Iris, Phosphor, Noxesium, Replay Mod, and Indium.",
+              "credits": null,
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/fabric.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.12",
+      "name": "The World of Color Update",
+      "description": "The \"World of Color Update\" is the name given to the release of version 1.12 on June 7th, 2017. This update includes many new features such as new coloured blocks with an enhanced pallet, parrots, the introduction of the recipe book in the inventory, a Narrator mode that says what is typed in chat out loud, new sounds, and much more!",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_12-1.png",
+          "title": "New animal - Parrots"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_12-2.png",
+          "title": "New advancements system"
+        }
+      ],
+      "default": false,
+      "releaseDate": "2017-07-06",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_12.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_12.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_12.png"
+      },
+      "subversions": [
+        {
+          "id": "1.12.2",
+          "default": true,
+          "snapshot": false,
+          "assets": {
+            "sha1": "a21e1ded1a24ea1548dd8db0cf30b6acb02655a9",
+            "url": "https://piston-meta.mojang.com/v1/packages/a21e1ded1a24ea1548dd8db0cf30b6acb02655a9/1.12.json",
+            "id": "1.12"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": true,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            },
+            {
+              "id": "forge",
+              "default": false,
+              "name": "Lunar + Forge",
+              "description": "Lunar bundled with the Forge mod loader and a selection of Forge mods. Some of these mods included are OptiFine, Replay Mod, NotEnoughUpdates, and SkyblockAddons.",
+              "credits": null,
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/forge.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.7",
+      "name": "The Update that Changed the World",
+      "description": "\"The Update that Changed the World\" is the name given to the release of version 1.7 on October 25th, 2013. This update includes many new features such as a new terrain generator, many new biomes and biome variations, new tree types, many new flowers, red sand, stained glass, and much more!",
+      "carousel": [
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_7-1.png",
+          "title": "Classic PvP Experience"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_7-2.png",
+          "title": "New wood types"
+        },
+        {
+          "image": "https://launcherimages.lunarclientcdn.com/versions/carousel/1_7-3.png",
+          "title": "New biomes"
+        }
+      ],
+      "default": false,
+      "releaseDate": "2014-02-16",
+      "images": {
+        "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/background/1_7.png",
+        "foreground": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=476,height=220/versions/foreground/1_7.png",
+        "icon": "https://launcherimages.lunarclientcdn.com/versions/icons/1_7.png"
+      },
+      "subversions": [
+        {
+          "id": "1.7.10",
+          "default": true,
+          "snapshot": false,
+          "assets": {
+            "sha1": "1863782e33ce7b584fc45b037325a1964e095d3e",
+            "url": "https://launchermeta.mojang.com/v1/packages/1863782e33ce7b584fc45b037325a1964e095d3e/1.7.10.json",
+            "id": "1.7.10"
+          },
+          "modules": [
+            {
+              "id": "lunar",
+              "default": true,
+              "name": "Lunar + OptiFine",
+              "description": "Lunar bundled with OptiFine. OptiFine is an optimization mod that allows Minecraft to run faster and look better.",
+              "credits": "sp614x",
+              "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=40,height=40/modules/optifine.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "branchReset": false,
+  "updater": {
+    "channel": "latest",
+    "feedUrl": "https://launcherupdates.lunarclientcdn.com"
+  },
+  "serversCta": {
+    "url": "https://www.bisecthosting.com/lunar",
+    "image": {
+      "default": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto/extra/bisect-cta.png",
+      "christmas": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto/seasonal/christmas/bisect-cta.png"
+    }
+  },
+  "servers": [
+    {
+      "id": "hypixel",
+      "name": "Hypixel Network",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/hypixel.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/hypixel-480.webp",
+      "ip": "mc.hypixel.net",
+      "joinIp": "mc.hypixel.net",
+      "pingIp": "mc.hypixel.net",
+      "gameMode": "Skyblock, Minigames",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.8.9",
+        "1.8",
+        "1.12.2",
+        "1.12",
+        "1.16.5",
+        "1.16",
+        "1.17.1",
+        "1.17",
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4",
+        "1.20",
+        "1.20.1"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#ecb94f",
+      "secondaryColor": "#372826"
+    },
+    {
+      "id": "mccisland",
+      "name": "MCC Island",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/mccisland.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/mccisland-480.webp",
+      "ip": "mccisland.net",
+      "joinIp": "lunar.mccisland.net",
+      "pingIp": "lunar.mccisland.net",
+      "gameMode": "Minigames",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.19.4",
+        "1.20",
+        "1.20.1"
+      ],
+      "recommendedVersion": "1.20.1",
+      "primaryColor": "#f9e28b",
+      "secondaryColor": "#15ddfd"
+    },
+    {
+      "id": "tubnet",
+      "name": "TubNet",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/tubnet.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/tubnet-480.webp",
+      "ip": "tubnet.gg",
+      "joinIp": "lunar.tubnet.gg",
+      "pingIp": "lunar.tubnet.gg",
+      "gameMode": "Minigames",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4"
+      ],
+      "recommendedVersion": "1.19.2",
+      "primaryColor": "#f88e02",
+      "secondaryColor": "#21aded"
+    },
+    {
+      "id": "strutworld",
+      "name": "STRUT WORLD",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/strutworld.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/strutworld-480.webp",
+      "ip": "strutmc.com",
+      "joinIp": "strutmc.com",
+      "pingIp": "strutmc.com",
+      "gameMode": "Minigames, Survival",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.19.4",
+        "1.20",
+        "1.20.1"
+      ],
+      "recommendedVersion": "1.20",
+      "primaryColor": "#29d400",
+      "secondaryColor": "#008bd4"
+    },
+    {
+      "id": "vipermc",
+      "name": "ViperMC",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/vipermc.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/vipermc-480.webp",
+      "ip": "play.vipermc.net",
+      "joinIp": "play.vipermc.net",
+      "pingIp": "play.vipermc.net",
+      "gameMode": "HCF,Practice",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.7.10",
+        "1.7",
+        "1.8.9",
+        "1.8"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#2197fc",
+      "secondaryColor": "#f88f28"
+    },
+    {
+      "id": "invadedlands",
+      "name": "InvadedLands",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/invadedlands.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/invadedlands-480.webp",
+      "ip": "invadedlands.net",
+      "joinIp": "invadedlands.net",
+      "pingIp": "invadedlands.net",
+      "gameMode": "KitPvP, Skyblock",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.7.10",
+        "1.7",
+        "1.8.9",
+        "1.8",
+        "1.12.2",
+        "1.12",
+        "1.16.5",
+        "1.16",
+        "1.17.1",
+        "1.17",
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#44a1e3",
+      "secondaryColor": "#a854de"
+    },
+    {
+      "id": "pvplegacy",
+      "name": "PvP Legacy",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/pvplegacy.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/pvplegacy-480.webp",
+      "ip": "pvplegacy.net",
+      "joinIp": "pvplegacy.net",
+      "pingIp": "pvplegacy.net",
+      "gameMode": "KitPvP",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.17.1",
+        "1.17",
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4",
+        "1.20",
+        "1.20.1"
+      ],
+      "recommendedVersion": "1.20.1",
+      "primaryColor": "#0392c5",
+      "secondaryColor": "#a2a1a3"
+    },
+    {
+      "id": "vanic",
+      "name": "Vanic Network",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/vanic.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/vanic-480.webp",
+      "ip": "vanic.gg",
+      "joinIp": "vanic.gg",
+      "pingIp": "vanic.gg",
+      "gameMode": "UHC, Practice",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.7.10",
+        "1.7",
+        "1.8.9",
+        "1.8"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#272727",
+      "secondaryColor": "#5482ff"
+    },
+    {
+      "id": "octc",
+      "name": "Overcast Community",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/octc.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/octc-480.webp",
+      "ip": "play.oc.tc",
+      "joinIp": "play.oc.tc",
+      "pingIp": "lunar.oc.tc",
+      "gameMode": "CTW, DTC, TDM",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.7.10",
+        "1.7",
+        "1.8.9",
+        "1.8",
+        "1.12.2",
+        "1.12",
+        "1.16.5",
+        "1.16",
+        "1.17.1",
+        "1.17",
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4",
+        "1.20",
+        "1.20.1"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#d7d2bf",
+      "secondaryColor": "#4c0704"
+    },
+    {
+      "id": "opblocks",
+      "name": "OPBlocks",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/opblocks.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/opblocks-480.webp",
+      "ip": "opblocks.com",
+      "joinIp": "lunar.opblocks.com",
+      "pingIp": "lunar.opblocks.com",
+      "gameMode": "Prison, Skyblock, SMP",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.8.9",
+        "1.8",
+        "1.12.2",
+        "1.12",
+        "1.16.5",
+        "1.16",
+        "1.17.1",
+        "1.17",
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#9638b5",
+      "secondaryColor": "#e8becc"
+    },
+    {
+      "id": "mccentral",
+      "name": "Minecraft Central",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/mccentral.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/mccentral-480.webp",
+      "ip": "mccentral.org",
+      "joinIp": "lunar.mccentral.org",
+      "pingIp": "lunar.mccentral.org",
+      "gameMode": "Skyblock, Minigames",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.8.9",
+        "1.8",
+        "1.12.2",
+        "1.12",
+        "1.16.5",
+        "1.16",
+        "1.17.1",
+        "1.17",
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#e3b34a",
+      "secondaryColor": "#1a1c20"
+    },
+    {
+      "id": "holyhcf",
+      "name": "Holy Network",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/holyhcf.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/holyhcf-480.webp",
+      "ip": "holypvp.net",
+      "joinIp": "holypvp.net",
+      "pingIp": "holypvp.net",
+      "gameMode": "HCF",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.7.10",
+        "1.7",
+        "1.8.9",
+        "1.8"
+      ],
+      "recommendedVersion": "1.8.9",
+      "primaryColor": "#dedede",
+      "secondaryColor": "#e6b511"
+    },
+    {
+      "id": "shotbow",
+      "name": "Shotbow",
+      "icon": "https://servermappings.lunarclientcdn.com/logos/shotbow.webp",
+      "background": "https://servermappings.lunarclientcdn.com/backgrounds/shotbow-480.webp",
+      "ip": "shotbow.net",
+      "joinIp": "play.shotbow.net",
+      "pingIp": "play.shotbow.net",
+      "gameMode": "Anni, MineZ",
+      "region": "NA",
+      "placement": [
+        "LAUNCHER_HOME",
+        "LAUNCHER_SERVERS"
+      ],
+      "supportedVersions": [
+        "1.12.2",
+        "1.12",
+        "1.16.5",
+        "1.16",
+        "1.17.1",
+        "1.17",
+        "1.18.1",
+        "1.18.2",
+        "1.18",
+        "1.19",
+        "1.19.2",
+        "1.19.3",
+        "1.19.4"
+      ],
+      "recommendedVersion": "1.19.2",
+      "primaryColor": "#553c22",
+      "secondaryColor": "#c1c1c0"
+    }
+  ],
+  "blogPosts": [
+    {
+      "title": "Lunar+ Cosmetics",
+      "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=webp,width=1280,height=720,dpr=2/blogs/lunarpluscosmetics-min.png",
+      "excerpt": "Lunar+ Subscribers just got new and exclusive cosmetics to choose from! Join the Lunar+ family today for a ton of benefits!",
+      "link": "https://www.lunarclient.com/plus?utm_source=launcher&utm_medium=blog-post&utm_campaign=lead",
+      "deep_link": null,
+      "forced": false,
+      "badge": null,
+      "author": "Physci",
+      "author_uuid": "1403a220-1552-47a3-bd9a-3c38ee4869e0",
+      "author_image": null,
+      "button_text": "Shop now",
+      "button_icon": "SHOPPING_CART",
+      "button_color": "BLUE",
+      "hash": "26138b6934ec0b58407bd5840d67121c10644e9099bd6a93ce69b3eb61c21e11"
+    },
+    {
+      "title": "Aquatic Collection",
+      "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=webp,width=400,height=170,dpr=2/blogs/aquaticlauncherimage.png",
+      "excerpt": "The new Aquatic Collection includes new pets, hats, and cloaks! Check it out and get 10% off if you subscribe to Lunar+",
+      "link": "https://store.lunarclient.com",
+      "deep_link": null,
+      "forced": false,
+      "badge": null,
+      "author": "Physci",
+      "author_uuid": "1403a220-1552-47a3-bd9a-3c38ee4869e0",
+      "author_image": null,
+      "button_text": null,
+      "button_icon": "BOOK",
+      "button_color": "BLUE",
+      "hash": "911ded6fd45cb7c1d368d9419fa7c64d8b4246776307a53bee85b5d5a262c395"
+    },
+    {
+      "title": "Bisect Partnership",
+      "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=webp,width=1280,height=720,dpr=2/blogs/bisectpartner-modern.png",
+      "excerpt": "Lunar is proud to partner with BisectHosting. Use the code \"Lunar\" at checkout and get 25% off your first month of service!",
+      "link": "https://bisecthosting.com/lunar",
+      "deep_link": null,
+      "forced": true,
+      "badge": null,
+      "author": "BisectHosting",
+      "author_uuid": "1403a220-1552-47a3-bd9a-3c38ee4869e0",
+      "author_image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=16,height=16/authors/bisect.png",
+      "button_text": "Create Server",
+      "button_icon": "SHOPPING_CART",
+      "button_color": "BLUE",
+      "hash": "3c498ff744c967c595d64548b6bf4f2907639d492e072c49ddaf216b2c093a6e"
+    }
+  ],
+  "navItems": [],
+  "images": {
+    "default": {
+      "logo": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=44,height=40,dpr=2/logo.png",
+      "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=1300,dpr=2/background-2x.png"
+    },
+    "christmas": {
+      "logo": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=44,height=40,dpr=2/seasonal/christmas/logo.png",
+      "background": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=1300,dpr=2/seasonal/christmas/background.png"
+    }
+  },
+  "theme": "default",
+  "onlinePlayers": {
+    "game": 19200,
+    "launcher": 52700
+  },
+  "featureFlags": [
+    {
+      "identifier": "overrides",
+      "value": true
+    },
+    {
+      "identifier": "ServersCTA",
+      "value": true
+    },
+    {
+      "identifier": "CustomizableQuickPlay",
+      "value": false
+    },
+    {
+      "identifier": "CommunityServers",
+      "value": false
+    },
+    {
+      "identifier": "PlaywireRamp",
+      "value": true
+    },
+    {
+      "identifier": "SocialMessaging",
+      "value": true
+    },
+    {
+      "identifier": "LaunchCancelling",
+      "value": false
+    },
+    {
+      "identifier": "NotificationsInbox",
+      "value": false
+    }
+  ],
+  "alert": null,
+  "videoPromotion": {
+    "timings": {
+      "cooldowns": {
+        "house": 60000,
+        "direct": 300000
+      },
+      "viewsBeforeCooldown": {
+        "house": 3,
+        "direct": 1
+      }
+    },
+    "positioning": {
+      "blog": {
+        "slot": 1
+      },
+      "sidebar": null
+    },
+    "playerUrl": "https://dtapp.lunarclient.com/video",
+    "fallbackThumbnail": "https://launcherimages.lunarclientcdn.com/promotions/thumbnails/frosted-flakes-2023/tiger-backpack.png",
+    "activeCreatives": []
+  },
+  "sentryFilteredExceptions": []
+}

@@ -1,0 +1,33 @@
+{
+  "properties": [
+    {
+      "name": "api.error",
+      "type": "java.lang.String",
+      "description": "Error format."
+    },
+    {
+      "name": "api.redirectLaunch",
+      "type": "java.lang.String",
+      "description": "Official launch API."
+    },
+    {
+      "name": "pay.unknown",
+      "type": "java.lang.String",
+      "description": "Redirect link for unknown UA."
+    },
+    {
+      "name": "pay.wechat",
+      "type": "java.lang.String",
+      "description": "Redirect link for WeChat UA."
+    },
+    {
+      "name": "pay.qq",
+      "type": "java.lang.String",
+      "description": "Redirect link for QQ."
+    },
+    {
+      "name": "pay.alipay",
+      "type": "java.lang.String",
+      "description": "Redirect link for Alipay."
+    }
+  ] }

@@ -1,0 +1,402 @@
+{
+  "blogPosts": [
+    {
+      "title": "Lunar+ Cosmetics",
+      "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=webp,width=1280,height=720,dpr=2/blogs/lunarpluscosmetics-min.png",
+      "excerpt": "Lunar+ Subscribers just got new and exclusive cosmetics to choose from! Join the Lunar+ family today for a ton of benefits!",
+      "link": "https://www.lunarclient.com/plus?utm_source=client-game&utm_medium=blog-post&utm_campaign=lead",
+      "deep_link": null,
+      "forced": false,
+      "badge": null,
+      "author": "Physci",
+      "author_uuid": "1403a220-1552-47a3-bd9a-3c38ee4869e0",
+      "author_image": null,
+      "button_text": "Shop now",
+      "button_icon": "SHOPPING_CART",
+      "button_color": "BLUE",
+      "hash": "9457728cc5210157e70818cb4cef7fddea2256e8daf7fddd433faefd7182615b"
+    },
+    {
+      "title": "Aquatic Collection",
+      "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=webp,width=400,height=170,dpr=2/blogs/aquaticlauncherimage.png",
+      "excerpt": "The new Aquatic Collection includes new pets, hats, and cloaks! Check it out and get 10% off if you subscribe to Lunar+",
+      "link": "https://store.lunarclient.com",
+      "deep_link": null,
+      "forced": false,
+      "badge": null,
+      "author": "Physci",
+      "author_uuid": "1403a220-1552-47a3-bd9a-3c38ee4869e0",
+      "author_image": null,
+      "button_text": null,
+      "button_icon": "BOOK",
+      "button_color": "BLUE",
+      "hash": "911ded6fd45cb7c1d368d9419fa7c64d8b4246776307a53bee85b5d5a262c395"
+    },
+    {
+      "title": "Bisect Partnership",
+      "image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=webp,width=400,height=170,dpr=2/blogs/bisectpartner.png",
+      "excerpt": "Lunar is proud to partner with BisectHosting. Use the code \"Lunar\" at checkout and get 25% off your first month of service!",
+      "link": "https://bisecthosting.com/lunar",
+      "deep_link": null,
+      "forced": true,
+      "badge": null,
+      "author": "BisectHosting",
+      "author_uuid": "1403a220-1552-47a3-bd9a-3c38ee4869e0",
+      "author_image": "https://launcherimages.lunarclientcdn.com/cdn-cgi/image/format=auto,width=16,height=16/authors/bisect.png",
+      "button_text": "Create Server",
+      "button_icon": "SHOPPING_CART",
+      "button_color": "BLUE",
+      "hash": "3c498ff744c967c595d64548b6bf4f2907639d492e072c49ddaf216b2c093a6e"
+    }
+  ],
+  "alert": {
+    "colors": {
+      "RED": {
+        "default": "#59db4040",
+        "hover": "#80db4040"
+      },
+      "BLUE": {
+        "default": "#592b71ce",
+        "hover": "#802b71ce"
+      },
+      "PURPLE": {
+        "default": "#59800080",
+        "hover": "#80800080"
+      },
+      "TWITCH": {
+        "default": "#596441a5",
+        "hover": "#806441a5"
+      },
+      "YOUTUBE": {
+        "default": "#59c4302b",
+        "hover": "#80c4302b"
+      },
+      "DISCORD": {
+        "default": "#597289da",
+        "hover": "#807289da"
+      },
+      "TWITTER": {
+        "default": "#5900acee",
+        "hover": "#8000acee"
+      },
+      "YOUTOOZ": {
+        "default": "#59ff467f",
+        "hover": "#80ff467f"
+      }
+    },
+    "active": []
+  },
+  "modSettings": {
+    "skyblockAddons": {
+      "properties": {
+        "disableEmberRod": false,
+        "hidePlayersNearNPC": false,
+        "ignoreItemFrameClicks": false,
+        "avoidPlacingEnchantItems": false,
+        "avoidBreakingStems": false,
+        "preventMovementOnDeath": false,
+        "craftingPatterns": false,
+        "craftingPattern": false,
+        "jungleAxeCooldown": false,
+        "onlyMineOresDeepCaverns": false,
+        "onlyMineValuablesNether": false,
+        "doubleWarp": false,
+        "onlyBreakLogsPark": false,
+        "dontOpenProfilesWithBow": false
+      }
+    }
+  },
+  "clientSettings": {
+    "GENERAL": {}
+  },
+  "pinnedServers": [
+    {
+      "name": "TubNet",
+      "ip": "lunar.tubnet.gg",
+      "expirationDate": -1,
+      "versions": [
+        "1.19.3",
+        "1.19",
+        "1.18.1",
+        "1.19.4",
+        "1.18.2",
+        "1.19.2",
+        "1.18",
+        "1.19.0"
+      ],
+      "removable": true
+    }
+  ],
+  "starServers": [
+    {
+      "pattern": "*.mccisland.net",
+      "resource": null
+    },
+    {
+      "pattern": "*tubnet.gg",
+      "resource": null
+    },
+    {
+      "pattern": "*.strutmc.com",
+      "resource": null
+    },
+    {
+      "pattern": "*.vipermc.net",
+      "resource": null
+    },
+    {
+      "pattern": "*pokewild.com",
+      "resource": null
+    },
+    {
+      "pattern": "*.pvplegacy.net",
+      "resource": null
+    },
+    {
+      "pattern": "*.vanic.gg",
+      "resource": null
+    },
+    {
+      "pattern": "*.oc.tc",
+      "resource": null
+    },
+    {
+      "pattern": "*.opblocks.com",
+      "resource": "icons/stars/lunar_32x32_blue.png"
+    },
+    {
+      "pattern": "*.mccentral.org",
+      "resource": "icons/stars/lunar_32x32_blue.png"
+    },
+    {
+      "pattern": "*.ghostly.live",
+      "resource": null
+    },
+    {
+      "pattern": "*.holypvp.net",
+      "resource": null
+    },
+    {
+      "pattern": "*.shotbow.net",
+      "resource": null
+    },
+    {
+      "pattern": "*.minecadia.com",
+      "resource": null
+    }
+  ],
+  "featuredServers": [],
+  "featureFlag": [
+    {
+      "identifier": "Trailer",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "LunarPlus",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "DevSentryReportHandler",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "BetaSentryReportHandler",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "BetaSentryExceptionHandler",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "BetaSentryEventBus",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "SentryTraceSampling",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "showOptifineCapes",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "DevSentryExceptionHandler",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "DevSentryEventBus",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "mcstats",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "YouTooz",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "Wrapped",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "DevSentryAuthHandler",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "BetaSentryAuthHandler",
+      "value": true,
+      "percentage": 100
+    },
+    {
+      "identifier": "SentryReportHandler",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "SentryExceptionHandler",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "SentryAuthHandler",
+      "value": false,
+      "percentage": 100
+    },
+    {
+      "identifier": "SentryEventBus",
+      "value": false,
+      "percentage": 100
+    }
+  ],
+  "serverIntegration": [
+    {
+      "ip": [
+        "shotbow.net",
+        "shotbow.com"
+      ],
+      "modSettings": {
+        "textHotKey": {
+          "enabled": false
+        },
+        "particleMod": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "ip": [
+        "hypixel.net"
+      ],
+      "brand": "Hypixel BungeeCord",
+      "modSettings": {
+        "textHotKey": {
+          "enabled": false
+        },
+        "freelook": {
+          "enabled": false
+        },
+        "MINIMAP": {
+          "enabled": false
+        },
+        "particleMod": {
+          "properties": {
+            "particleMod_footstep": "false"
+          }
+        }
+      }
+    },
+    {
+      "ip": [
+        "mccisland.net",
+        "mccisland.com",
+        "noxcrew.online"
+      ],
+      "modSettings": {
+        "tab": {
+          "enabled": false
+        },
+        "directionhud": {
+          "enabled": false
+        },
+        "tntCountdown": {
+          "enabled": false
+        },
+        "nametag": {
+          "nametag_bl": false
+        },
+        "nickHider": {
+          "enabled": false
+        },
+        "waypoints": {
+          "enabled": false
+        },
+        "time_changer": {
+          "enabled": false
+        },
+        "snaplook": {
+          "enabled": false
+        },
+        "freelook": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "ip": [
+        "mcc.noxcrew.com"
+      ],
+      "modSettings": {
+        "tab": {
+          "enabled": false
+        }
+      }
+    }
+  ],
+  "knownServersHash": "c00cdb04a7f92276c4a3e3c8916e15142c75259e9bc65b9fb3d803d7c252169a",
+  "store": {
+    "success": true
+  },
+  "sentryFilteredExceptions": [
+    {
+      "identifier": "rpc-timeout",
+      "regex": "Timeout waiting for response .*"
+    },
+    {
+      "identifier": "webp",
+      "regex": "java\\.lang\\.UnsatisfiedLinkError\\: \\'int com\\.luciad\\.imageio\\.webp\\.WebP\\.getInfo\\(byte\\[\\]\\, int\\, int\\, int\\[\\]\\)\\'"
+    },
+    {
+      "identifier": "3dskins",
+      "regex": "HttpTexture is already uploaded & no cache file exists"
+    }
+  ],
+  "langOverride": {
+    "settings": {
+      "shoes_bl": "Shoes"
+    }
+  },
+  "links": {
+    "wrapped": "https://wrapped.lunarclient.com/access/",
+    "store": "https://store.lunarclient.com/?utm_source=client-multiver&utm_medium=main-menu",
+    "website": "https://www.lunarclient.com",
+    "support": "https://support.lunarclient.com",
+    "merch": "https://merch.lunarclient.com",
+    "youtooz": "https://lunarclient.youtooz.com",
+    "trailer": "https://lunarclient.com/trailer"
+  }
+}
