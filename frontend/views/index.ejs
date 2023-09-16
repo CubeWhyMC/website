@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="always" name="referrer">
+    <meta name="description" content="Genesis是世界上最好的类加载器 | LunarClient Addon"/>
+    <meta name="keywords"
+          content="lunarcn,lunarcn.top,lunar客户端,lunarcn官网,官网,liquidlunar,lunarclient,全饰品,lunar mod,lunar,lunarcn.top,badlion,badlion客户端,lunarcn: lunarcn.top,lunarcn ..top,lncn">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <title>LunarCN Client</title>
+    <style>/* 样式可根据需求进行修改 */
+        .language-selector {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: black;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: white
+        }
+
+        .label {
+            margin-right: 10px;
+        }
+
+    </style>
+    <script>// 获取浏览器的语言设置
+        var userLang = navigator.language || navigator.userLanguage;
+
+        // 将语言设置转换为小写，以便比较
+        userLang = userLang.toLowerCase();
+
+        // 如果语言是英文，就跳转到/en文件夹
+        if (userLang.indexOf("en") !== -1) {
+            window.location.href = "en"; // 修改此处的路径为实际的/en文件夹路径
+        }
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ef9c555938fd3d70ea01c9648d1860d3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</head>
+<body>
+<header class="header">
+    <a href="#" class="logo" alt="LunarCN">LunarCN</a>
+
+    <div class="language-selector">
+        <label>
+            <input type="radio" name="language" value="zh" checked> 中文
+        </label>
+        <label>
+            <input type="radio" name="language" value="en"> English
+        </label>
+    </div>
+
+    <script>
+        const languageSelector = document.querySelector('.language-selector');
+        const languageRadios = languageSelector.querySelectorAll('input[type="radio"]');
+
+        // 监听语言选择变化
+        languageRadios.forEach((radio) => {
+            radio.addEventListener('change', function () {
+                if (this.checked) {
+                    const selectedLanguage = this.value;
+                    setLanguage(selectedLanguage);
+                }
+            });
+        });
+
+        // 设置语言并重定向到相应的页面
+        function setLanguage(language) {
+            if (language === 'en') {
+                window.location.href = '/en'; // 替换为实际的英文页面路径
+            } else {
+                window.location.href = '/'; // 替换为实际的中文页面路径
+            }
+        }
+
+
+    </script>
+
+    <nav class="navbar">
+        <a href="#" class="active item" style="--i: 1">主页</a>
+        <a href="help/" class="item" style="--i: 3">Wiki</a>
+        <a href="https://donate.lunarcn.top/" class="item" style="--i: 3">捐赠</a>
+        <a href="/cape" class="item" style="--i: 3">披风管理</a>
+        <a href="https://liquid.lunarcn.top/" class="item" style="--i: 3">LiquidLunar</a>
+    </nav>
+</header>
+
+<section class="home">
+    <div class="home-content">
+        <h3>你好!</h3>
+        <h1>这里是LunarCN</h1>
+        <h3><span class="multiple-text"></span></h3>
+        <div class="social-media">
+            <a href="https://space.bilibili.com/1106744676" style="--i: 7"><i class="bx bxl-youtube"></i></a>
+            <a href="https://github.com/CubeWhyMC/LunarClient-CN" style="--i: 8"><i class="bx bxl-github"></i></a>
+            <a href="https://discord.gg/rCqCepgWJc" style="--i: 8"><i class="bx bxl-discord"></i></a>
+        </div>
+        <a href="/download" class="btn">下载</a>
+    </div>
+    <div class="home-img">
+        <img src="images/favicon.ico" alt="LunarCN"/>
+    </div>
+    <br>
+    <div>
+        <h2>赞助列表</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>赞助者</th>
+                <th>金额</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>256576485</td>
+                <td>¥5</td>
+            </tr>
+            <tr>
+                <td>1633660351</td>
+                <td>¥1</td>
+            </tr>
+            <tr>
+                <td>3606424889</td>
+                <td>¥5</td>
+            </tr>
+            <tr>
+                <td>2709531597</td>
+                <td>¥5</td>
+            </tr>
+            <tr>
+                <td>3585254697</td>
+                <td>¥5</td>
+            </tr>
+            <tr>
+                <td>114514</td>
+                <td>¥6</td>
+            </tr>
+            <tr>
+                <td>1278347583</td>
+                <td>¥5</td>
+            </tr>
+            <tr>
+                <td>3570872605</td>
+                <td>¥5</td>
+            </tr>
+            <tr>
+                <td>2097014552</td>
+                <td>¥10</td>
+            </tr>
+            <tr>
+                <td>3325267357</td>
+                <td>¥5</td>
+            </tr>
+            <!-- 继续添加其他赞助者... -->
+            </tbody>
+        </table>
+    </div>
+</section>
+<script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+<script src="/javascripts/text.js"></script>
+当前访问量:<span id="busuanzi_value_site_pv"></span>
+</body>
+</html>
