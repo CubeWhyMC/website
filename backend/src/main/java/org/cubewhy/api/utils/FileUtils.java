@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 import java.io.*;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 @Component
 public class FileUtils {
@@ -114,5 +116,19 @@ public class FileUtils {
     public void sendImage(File file, HttpServletResponse response) throws IOException {
         String[] fileSplit = file.getName().split("\\.");
         this.sendImage(file, response, "image/" + fileSplit[fileSplit.length - 1]);
+    }
+
+    public void save(byte[] bytes, Path path) throws IOException {
+        try (OutputStream stream = Files.newOutputStream(path)) {
+            stream.write(bytes); // dump
+        }
+    }
+
+    public void save(byte[] bytes, File file) throws IOException {
+        this.save(bytes, file.toPath());
+    }
+
+    public void save(byte[] bytes, String path) throws IOException {
+        this.save(bytes, Path.of(path));
     }
 }
