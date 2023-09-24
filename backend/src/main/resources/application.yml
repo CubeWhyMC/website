@@ -10,12 +10,12 @@ spring:
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
-server:
-  ssl:
-    key-store: classpath:keystore.p12
-    key-store-type: PKCS12
-    key-alias: tomcat
-    key-store-password: 123456
+#server:
+#  ssl:
+#    key-store: classpath:keystore.p12
+#    key-store-type: PKCS12
+#    key-alias: tomcat
+#    key-store-password: 123456
 pay:
   unknown: https://donate.lunarcn.top
   wechat: wxp://f2f0YKOmPCTeVwg5tn9YA3Q2Z9TR913RhMVMnIDLIlVMJoAZhFUuwBIYQ0j55-warxH6
