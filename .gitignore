@@ -39,3 +39,5 @@ backend/HELP.md
 ### frontend ###
 
 /frontend/node_modules
+/frontend/key
+!/frontend/key/readme.txt

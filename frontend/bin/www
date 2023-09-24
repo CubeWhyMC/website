@@ -14,15 +14,15 @@ var fs = require("fs")
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3030');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
  * Create HTTPS server.
  */
 
-var privateCrt = fs.readFileSync(path.join(process.cwd(), 'key', 'cert.pem'), 'utf8');
-var privateKey = fs.readFileSync(path.join(process.cwd(), 'key', 'private.key'), 'utf8');
+var privateCrt = fs.readFileSync(path.join(process.cwd(), 'key', 'certificate.crt'), 'utf8');
+var privateKey = fs.readFileSync(path.join(process.cwd(), 'key', 'private.pem'), 'utf8');
 
 const HTTPS_OPTION = {
   key: privateKey,
