@@ -6,7 +6,9 @@
 
 var app = require('../app');
 var debug = require('debug')('frontend:server');
-var http = require('http');
+var https = require('https');
+var path = require('path');
+var fs = require("fs")
 
 /**
  * Get port from environment and store in Express.
@@ -19,11 +21,21 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var privateCrt = fs.readFileSync(path.join(process.cwd(), 'key', 'cert.pem'), 'utf8');
+var privateKey = fs.readFileSync(path.join(process.cwd(), 'key', 'private.key'), 'utf8');
+
+const HTTPS_OPTION = {
+  key: privateKey,
+  cert: privateCrt
+};
+
+var server = https.createServer(HTTPS_OPTION, app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
+
+console.log("Listening on port " + port)
 
 server.listen(port);
 server.on('error', onError);
