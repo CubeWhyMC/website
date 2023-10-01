@@ -33,7 +33,7 @@ public class AddonFileListener extends FileAlterationListenerAdaptor {
         JSONObject json = new JSONObject();
         json.put("name", file.getName());
         json.put("category", getAddonType(file));
-        json.put("downloadLink", "/plugins/download?path=" + file.getPath().replace(addonFolder.getPath(), "").replace("\\", "/"));
+        json.put("downloadLink", "/plugins/download" + file.getPath().replace(addonFolder.getPath(), "").replace("\\", "/"));
         addons.add(json);
     }
 
