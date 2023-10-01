@@ -6,6 +6,8 @@ import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 import static org.cubewhy.api.BackendApplication.addonFolder;
 
@@ -33,7 +35,7 @@ public class AddonFileListener extends FileAlterationListenerAdaptor {
         JSONObject json = new JSONObject();
         json.put("name", file.getName());
         json.put("category", getAddonType(file));
-        json.put("downloadLink", "/plugins/download" + file.getPath().replace(addonFolder.getPath(), "").replace("\\", "/"));
+        json.put("downloadLink", "/plugins/download?path=" + URLEncoder.encode(file.getPath().replace(addonFolder.getPath(), "").replace("\\", "/"), StandardCharsets.UTF_8).replace("%2F", "/"));
         addons.add(json);
     }
 

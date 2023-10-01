@@ -30,16 +30,12 @@ public class PluginController {
         response.getWriter().write(RestBean.success(addons).toJson());
     }
 
-    @GetMapping("download/**")
-    public void download(HttpServletResponse response, HttpServletRequest request) throws IOException {
-        String[] path = request.getRequestURI().split("/");
-        String name = String.join("/", Arrays.copyOfRange(path, 3, path.length));
+    @GetMapping("download")
+    public void download(@RequestParam("path") String name, HttpServletResponse response) throws IOException {
         File file = new File(addonFolder, name);
         if (file.exists()) {
-            log.info("Plugin download request: " + name);
             utils.sendDownload(file, response);
         } else {
-            log.error("Plugin not found: " + name);
             response.setContentType("application/json; charset=UTF-8");
             response.setStatus(404);
             response.getWriter().write(RestBean.failure(404, "Not found").toJson());
