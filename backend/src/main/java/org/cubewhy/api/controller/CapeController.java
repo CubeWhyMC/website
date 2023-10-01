@@ -22,21 +22,21 @@ public class CapeController {
     FileUtils utils;
 
 
-    @GetMapping("{name}")
+    @GetMapping("{name}*.png")
     public void getCape(@PathVariable String name, @NotNull HttpServletResponse response) throws IOException {
         // Check file
-        File capeFile = new File(capeFolder + "/" + name);
+        File capeFile = new File(capeFolder + "/" + name + ".png");
         if (capeFile.exists()) {
             // send a download requests
             utils.sendImage(capeFile, response);
         } else {
             // redirect to official API
-            response.sendRedirect("https://s-optifine.net/capes/" + name);
-//            // Send 404
-//            response.setContentType("application/json;charset=utf-8");
-//            response.setStatus(404); // set status
-//            // write body
-//            response.getWriter().write(RestBean.failure(404, "Player not found").toJson());
+            response.sendRedirect("https://s-optifine.net/capes/" + name + ".png");
         }
+    }
+
+    @GetMapping("upload")
+    public void upload() {
+
     }
 }

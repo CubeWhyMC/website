@@ -6,7 +6,7 @@
 
 var app = require('../app');
 var debug = require('debug')('frontend:server');
-var https = require('https');
+var http = require('http');
 var path = require('path');
 var fs = require("fs")
 
@@ -18,18 +18,19 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Create HTTPS server.
+ * Create HTTP server.
  */
 
-var privateCrt = fs.readFileSync(path.join(process.cwd(), 'key', 'certificate.crt'), 'utf8');
-var privateKey = fs.readFileSync(path.join(process.cwd(), 'key', 'private.pem'), 'utf8');
+// var privateCrt = fs.readFileSync(path.join(process.cwd(), 'key', 'certificate.crt'), 'utf8');
+// var privateKey = fs.readFileSync(path.join(process.cwd(), 'key', 'private.pem'), 'utf8');
+//
+// const HTTPS_OPTION = {
+//   key: privateKey,
+//   cert: privateCrt
+// };
 
-const HTTPS_OPTION = {
-  key: privateKey,
-  cert: privateCrt
-};
-
-var server = https.createServer(HTTPS_OPTION, app);
+// var server = http.createServer(HTTPS_OPTION, app);
+let server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.

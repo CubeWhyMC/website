@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LunarCN Cape Manager</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/cape.css">
+    <title>LunarCN披风站</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
     <style>
         #searchContainer {
             position: absolute;
@@ -12,56 +12,13 @@
             right: 10px;
         }
     </style>
+    <script src="https://alcdn.msauth.net/msal-browser/2.14.2/js/msal.js"></script>
     <script src="https://recaptcha.net/recaptcha/api.js" async defer></script>
-    <script>
-        function toggleSearch() {
-            const searchIcon = document.getElementById('searchIcon');
-            const searchInput = document.getElementById('searchInput');
-
-            if (searchInput.style.display === 'none') {
-                searchInput.style.display = 'block';
-                searchIcon.style.display = 'none';
-            } else {
-                searchInput.style.display = 'none';
-                searchIcon.style.display = 'block';
-            }
-        }
-
-        function searchCape() {
-
-            const playerName = document.getElementById('searchPlayerName').value;
-            const capeResult = document.getElementById('capeResult');
-
-
-            if (playerName.replaceAll(" ", "") === "") {
-                capeResult.innerHTML = ""
-                return
-            }
-
-            console.log("Query: " + playerName);
-            fetch(`<%= api %>/capes/${playerName}.png`)
-                .then(response => {
-                    if (response.ok) {
-                        return response.blob();
-                    } else {
-                        throw new Error('未找到匹配的披风');
-                    }
-                })
-                .then(blob => {
-                    const imageUrl = URL.createObjectURL(blob);
-                    capeResult.innerHTML = `<h2>${playerName}的披风：</h2><img src="${imageUrl}" alt="披风预览" style="width:190px;height:160px;">`;
-                })
-                .catch(error => {
-                    const capeResult = document.getElementById('capeResult');
-                    capeResult.innerHTML = `<h2>披风查询失败：</h2>${error.message}`;
-                });
-        }
-    </script>
 </head>
 <body>
 <div id="searchContainer">
     <div id="searchIcon" onclick="toggleSearch()">
-        <img src="/images/search.svg" alt="Search Icon" style="height: 30px;width: 30px;">
+        <img src="static/icon/search.svg" alt="Search Icon" style="height: 30px;width: 30px;">
     </div>
     <div id="searchInput" style="display: none;">
         <form id="searchForm">
@@ -75,19 +32,56 @@
     <!-- 查询结果将显示在这里 -->
 </div>
 
-<!--<div id="loginContainer">-->
-<!--    <a href="https://login.live.com/oauth20_authorize.srf?client_id=dbb5fc17-43ac-4aa6-997e-ca69cde129a4&response_type=code&redirect_uri=https://cape.lunarcn.top/login&scope=XboxLive.signin%20offline_access">使用-->
-<!--        Microsoft 登录</a>-->
-<!--</div>-->
+<script>
+    function toggleSearch() {
+        const searchIcon = document.getElementById('searchIcon');
+        const searchInput = document.getElementById('searchInput');
+
+        if (searchInput.style.display === 'none') {
+            searchInput.style.display = 'block';
+            searchIcon.style.display = 'none';
+        } else {
+            searchInput.style.display = 'none';
+            searchIcon.style.display = 'block';
+        }
+    }
+
+    function searchCape() {
+
+        const playerName = document.getElementById('searchPlayerName').value;
+
+        // 发起请求到后端以查询玩家披风
+        fetch(`/searchCape/${playerName}`)
+            .then(response => {
+                if (response.ok) {
+                    return response.blob();
+                } else {
+                    throw new Error('未找到匹配的披风');
+                }
+            })
+            .then(blob => {
+                const imageUrl = URL.createObjectURL(blob);
+                const capeResult = document.getElementById('capeResult');
+                capeResult.innerHTML = `<h2>${playerName}的披风：</h2><img src="${imageUrl}" alt="披风预览" style="width:190px;height:160px;">`;
+            })
+            .catch(error => {
+                const capeResult = document.getElementById('capeResult');
+                capeResult.innerHTML = `<h2>披风查询失败：</h2>${error.message}`;
+            });
+    }
+</script>
+
+<div id="loginContainer">
+    <a href="https://login.live.com/oauth20_authorize.srf?client_id=dbb5fc17-43ac-4aa6-997e-ca69cde129a4&response_type=code&redirect_uri=https://cape.lunarcn.top/login&scope=XboxLive.signin%20offline_access">使用 Microsoft 登录</a>
+</div>
 
 <h1>创建玩家披风</h1>
-<label>注意: 上传违规披风会封禁你的账户</label>
-<label>请<a href="/login">登录</a>后上传</label>
 <form action="/submit" method="post" id="capeForm">
     <label for="playerName">玩家名:</label>
     <input type="text" id="playerName" name="playerName" required><br><br>
 
     <label for="selectedCape">选择披风:</label>
+    <label>上传违规披风会取消上传资格 </label>
     <select id="selectedCape" name="selectedCape" onchange="previewCape()">
         <option value="none">请选择披风</option>
         <!-- 披风选项将在服务器端动态生成 -->
@@ -96,8 +90,7 @@
     <img id="capePreview" src="" alt="披风预览" style="height: 250px;width:370px;">
 
     <br><br>
-    <div class="g-recaptcha" data-sitekey="6Lf-lhIoAAAAAGq60M1eF5iMN0XmSQn28VFBzKNq"
-         data-callback="recaptchaCallback"></div>
+    <div class="g-recaptcha" data-sitekey="6Lf-lhIoAAAAAGq60M1eF5iMN0XmSQn28VFBzKNq" data-callback="recaptchaCallback"></div>
     <input type="hidden" id="recaptchaResult" name="recaptchaResult" value="">
     <br>
     <input type="submit" value="提交" disabled>
@@ -107,13 +100,26 @@
     const selectCape = document.getElementById('selectedCape');
     const capePreview = document.getElementById('capePreview');
 
+    // 向服务器请求可用的披风选项
+    fetch('/getCapes')
+        .then(response => response.json())
+        .then(data => {
+            data.capes.forEach(cape => {
+                const option = document.createElement('option');
+                option.value = cape;
+                option.textContent = cape;
+                selectCape.appendChild(option);
+            });
+        })
+        .catch(error => console.error('获取披风选项时出错：', error));
+
     function previewCape() {
         const selectedCape = selectCape.value;
         const encodedFileName = encodeURIComponent(selectedCape);
 
         // 请求接口以获取图片
         if (selectedCape !== "none") {
-            fetch(`<%= api %>/capes/${encodedFileName}`)
+            fetch(`/preview/${encodedFileName}`)
                 .then(response => {
                     if (response.ok) {
                         return response.blob();

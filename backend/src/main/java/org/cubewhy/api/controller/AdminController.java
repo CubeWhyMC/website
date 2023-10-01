@@ -20,7 +20,7 @@ import static org.cubewhy.api.BackendApplication.addonFolder;
 
 @RestController
 @RequestMapping("/api/admin")
-public class AdminApiController {
+public class AdminController {
     @PutMapping("upload")
     public void upload(@RequestBody String base64, String filePath, @NotNull HttpServletResponse response) throws IOException {
         File file = new File(addonFolder, filePath);
