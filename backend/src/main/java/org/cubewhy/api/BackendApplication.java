@@ -17,6 +17,7 @@ public class BackendApplication {
     public static final File artifactsFolder = new File(configPath, "artifacts");
     public static final File applicationConfigFile = new File(configPath, "application.yml");
     public static void main(String[] args) {
+        configPath.mkdirs();
         new FileUtils().extractFile("application.yml", applicationConfigFile);
         System.setProperty("spring.config.location", applicationConfigFile.getAbsolutePath()); // set config
         System.setProperty("file.encoding", "UTF-8"); // set encoding

@@ -6,7 +6,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.cubewhy.api.service.impl.AccountServiceImpl;
 import org.cubewhy.api.utils.FileUtils;
 import org.cubewhy.api.utils.TextUtils;
-import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
@@ -27,6 +26,7 @@ public class CustomerController {
     @GetMapping("bind-mc")
     public void bindMinecraft(HttpServletResponse response, @RequestParam String token) {
         // do auth and bind
+
         String uuid = "";
     }
 

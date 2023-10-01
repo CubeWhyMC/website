@@ -2,7 +2,6 @@ package org.cubewhy.api.controller;
 
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.websocket.server.PathParam;
 import org.cubewhy.api.entity.RestBean;
 import org.cubewhy.api.utils.FileUtils;
 import org.jetbrains.annotations.NotNull;
@@ -10,14 +9,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
-import java.net.URLEncoder;
 
 import static org.cubewhy.api.BackendApplication.addonFolder;
 import static org.cubewhy.api.utils.AddonFileListener.addons;
 
 @Controller
-@RequestMapping("/market")
-public class MarketController {
+@RequestMapping("/plugins")
+public class PluginController {
     @Resource
     FileUtils utils;
 

@@ -35,7 +35,7 @@ public class AdminApiController {
             stream.write(bytes);
         }
         JSONObject json = new JSONObject();
-        json.put("path", "/market/download" + file.getPath().replace(addonFolder.getPath(), ""));
+        json.put("path", "/plugins/download" + file.getPath().replace(addonFolder.getPath(), ""));
         writer.write(RestBean.success(json).toJson()); // Ok
     }
 }
