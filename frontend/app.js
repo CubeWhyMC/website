@@ -4,11 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var capeRouter = require("./routes/cape");
+let indexRouter = require('./routes/index');
+let usersRouter = require('./routes/users');
+let capeRouter = require("./routes/cape");
+let liquidLunarRouter = require("./routes/liquid");
 
-var app = express();
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cape', capeRouter);
+app.use("/liquid", liquidLunarRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

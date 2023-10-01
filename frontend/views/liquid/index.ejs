@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LiquidLunar 客户端</title>
+    <meta name="description" content="Minecraft PvP Client"/>
+    <link rel="stylesheet" href="/stylesheets/liquid.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?5d1c01bb7319078f41e9492943c78e04";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<header>
+    <a href="#" class="logo">LiquidLunar</a>
+    <ul>
+        <li><a href="#" class="active">主页</a></li>
+        <li><a href="/liquid/about">关于我们</a></li>
+        <li><a href="https://github.com/CubeWhyMC/LiquidLunar/wiki">文档</a></li>
+        <li><a href="https://github.com/CubeWhyMC/LiquidLunar/issues">提问题</a></li>
+        <li><a href="https://github.com/CubeWhyMC/LiquidLunar/">源代码</a></li>
+    </ul>
+</header>
+<section>
+    <img src="/images/stars.png" id="stars">
+    <img src="/images/moon.png" id="moon">
+    <img src="/images/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">LiquidLunar</h2>
+    <a href="https://github.com/CubeWhyMC/LiquidLunar/releases" id="btn">下载</a>
+    <img src="/images/mountains_front.png" id="mountains_front">
+</section>
+<div class="sec" id="sec">
+    <h2>Developers</h2><br>
+    <div class="team-members">
+        <div class="team-member">
+            <a href="https://github.com/CubeWhy"><img src="https://avatars.githubusercontent.com/u/61075476?v=4"></a>
+            <a href="https://github.com/CubeWhy"><span>CubeWhy (Main dev)</span></a>
+        </div>
+        <div class="team-member">
+            <a href="https://github.com/catandA"><img src="https://avatars.githubusercontent.com/u/75292299?v=4"></a>
+            <a href="https://github.com/catandA"><span>catandA</span></a>
+        </div>
+        <div class="team-member">
+            <a href="https://github.com/yuxiangll"><img src="https://avatars.githubusercontent.com/u/108518874?v=4"></a>
+            <a href="https://github.com/yuxiangll"><span>yuxiangll (Not actively)</span></a>
+        </div>
+        <div class="team-member">
+            <a href="https://github.com/muskf"><img src="https://avatars.githubusercontent.com/u/86958845?v=4" alt="muskf"></a>
+            <a href="https://github.com/muskf"><span>muskf (Web developer)</span></a>
+        </div>
+    </div>
+</div>
+<script>
+    let stars = document.getElementById('stars')
+    let moon = document.getElementById('moon')
+    let mountains_behind = document.getElementById('mountains_behind')
+    let text = document.getElementById('text')
+    let btn = document.getElementById('btn')
+    let mountains_front = document.getElementById('mountains_front')
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px'
+        moon.style.top = value * 1.05 + 'px'
+        mountains_behind.style.top = value * 0.5 + 'px'
+        mountains_front.style.top = 0 + 'px'
+        text.style.marginRight = value * 4 + 'px'
+        text.style.marginTop = value * 1.5 + 'px'
+        btn.style.marginTop = value * 1.5 + 'px'
+        header.style.top = value * 0.5 + 'px'
+    })
+</script>
+<script>
+    const member = document.querySelector('.team-member');
+    const yRange = [-10,10];
+    const xRange = [-10,10];
+
+    function getRotate(range,value,max){
+        return value / max * (range[1] - range[0]) + range[0];
+    }
+    member.onmousemove = (e) =>{
+        const { offsetX,offsetY } = e;
+        const { offsetWidth,offsetHeight } = member;
+        const ry = -getRotate(yRange.offsetX, offsetWidth);
+        const rx = getRotate(yRange.offsetX, offsetWidth);
+        member.style.setProperty('--rx','${rx}deg');
+        member.style.setProperty('--ry','${ry}deg');
+    };
+    member.onmouseleave = (e) => {
+        member.style.setProperty('--rx','0deg');
+        member.style.setProperty('--ry','0deg');
+    };
+</script>
+</body>
+</html>
