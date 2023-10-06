@@ -22,4 +22,8 @@ router.get('/en/download', function(req, res, next) {
   res.render('download-en', {});
 });
 
+router.get("/donate", function(req, res) {
+  res.render("donate", {})
+});
+
 module.exports = router;
