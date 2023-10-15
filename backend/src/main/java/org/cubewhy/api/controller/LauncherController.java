@@ -27,8 +27,6 @@ public class LauncherController {
     TextUtils utils;
     @Resource
     FileUtils fileUtils;
-    @Value("${api.redirectLaunch}")
-    String redirectLaunchAPI;
 
     @GetMapping("metadata")
     public void metadata(HttpServletRequest request, @NotNull HttpServletResponse response) throws IOException {
@@ -49,10 +47,8 @@ public class LauncherController {
         InputStream stream = fileUtils.getExternalFile(branchesFolder + String.format("/%s/%s-%s.json", info.getBranch(), info.getVersion(), info.getModule()));
         if (stream != null) {
             json = utils.readAll(stream);
-        } else if (info.getBranch().equals("master") || info.getBranch().equals("development")) {
-            // return official branches
-            // TODO get official branches
         }
+
         if (json == null) {
             response.setStatus(404);
             json = utils.formatError("Not found", "Branch " + info.getBranch() + " not found, if you're a developer, add this branch in config", "BRANCH_NOT_FOUND");

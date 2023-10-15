@@ -22,5 +22,4 @@ pay:
   qq:
   alipay:
 api:
-  redirectLaunch: https://api.lunarclientprod.com/launcher/launch
   error: "{\"success\": false, \"error\":  {\"short\":  \"%title%\", \"message\":  \"%msg%\", \"code\": \"%code%\"}}"
