@@ -34,9 +34,4 @@ public class CapeController {
             response.sendRedirect("https://s-optifine.net/capes/" + name + ".png");
         }
     }
-
-    @GetMapping("upload")
-    public void upload() {
-
-    }
 }

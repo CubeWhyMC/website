@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/web")
-public class WebApiController {
+public class WebController {
     @Value("${pay.unknown}")
     String targetUnknown;
     @Value("${pay.wechat}")
