@@ -29,5 +29,10 @@
       "name": "pay.alipay",
       "type": "java.lang.String",
       "description": "Redirect link for Alipay."
+    },
+    {
+      "name": "api.version",
+      "type": "java.lang.String",
+      "description": "GitHub API link of LunarClient-CN."
     }
   ] }

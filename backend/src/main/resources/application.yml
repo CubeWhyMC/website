@@ -22,4 +22,5 @@ pay:
   qq:
   alipay:
 api:
+  version: https://api.github.com/repos/CubeWhyMC/LunarClient-CN/releases
   error: "{\"success\": false, \"error\":  {\"short\":  \"%title%\", \"message\":  \"%msg%\", \"code\": \"%code%\"}}"

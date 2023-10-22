@@ -49,6 +49,7 @@ public class SecurityConfiguration {
                                 .requestMatchers("/plugins/**").permitAll()
                                 .requestMatchers("/market/**").permitAll()
                                 .requestMatchers("/api/liquid/**").permitAll()
+                                .requestMatchers("/api/web/**").permitAll()
                                 .requestMatchers("/api/admin/**").hasRole("admin")
                                 .requestMatchers("/static/**").permitAll()
                                 .anyRequest().authenticated()
