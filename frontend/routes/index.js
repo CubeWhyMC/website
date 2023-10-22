@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/download', function(req, res, next) {
-  res.render('download', {});
+  res.render('download', {
+    api: process.env.backend
+  });
 });
 
 router.get('/help', function(req, res, next) {
@@ -19,7 +21,9 @@ router.get('/en', function(req, res, next) {
 });
 
 router.get('/en/download', function(req, res, next) {
-  res.render('download-en', {});
+  res.render('download-en', {
+    api: process.env.backend
+  });
 });
 
 router.get("/donate", function(req, res) {

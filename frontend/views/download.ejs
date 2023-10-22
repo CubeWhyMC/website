@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta content="always" name="referrer">
     <meta name="description" content="下载LunarCN | lunarcn.top"/>
-    <meta name="keywords" content="lunarcn,lunarcn.top,lunar客户端,lunarcn官网,官网,liquidlunar,lunarclient,全饰品,lunar mod,lunar,lunarcn.top,badlion,badlion客户端,原神,lunarcn: lunarcn.top,lunarcn ..top,lncn,lishangmc">
+    <meta name="keywords"
+          content="lunarcn,lunarcn.top,lunar客户端,lunarcn官网,官网,liquidlunar,lunarclient,全饰品,lunar mod,lunar,lunarcn.top,badlion,badlion客户端,原神,lunarcn: lunarcn.top,lunarcn ..top,lncn,lishangmc">
     <title>下载LunarCN</title>
     <script>
         var _hmt = _hmt || [];
@@ -15,7 +16,6 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-
     <link rel="icon" href="../src/images/ico.ico?newlogo" type="image/x-icon">
     <style>
         body {
@@ -112,8 +112,6 @@
             color: #34c0ff;
         }
 
-    </style>
-    <style type="css">
         #_copy {
             align-items: center;
             background: #4494d5;
@@ -195,10 +193,9 @@
     <ul>
         <center>
             <h2>最新版本为：</h2>
-            <h1><label>
-<!--                    <script type="text/javascript" src="https://lunarcn.top/api/version.php"></script>-->
-                    最新版本API已死亡
+            <h1><label id="latest">
                 </label></h1>
+            <script type="text/javascript" src="<%= api %>api/web/latest?format=js"></script>
             <br>
             <br>
             <a target="_blank" href="https://cowtransfer.com/s/7cec096e25314a">奶牛快传</a>
@@ -290,8 +287,8 @@
 <div class="footer">
     <center>
         <a href="/"><img src="/images/footer.png" class="wow fadeInDownBig animated"
-                                     data-wow-duration="1.5s" data-wow-delay=".1s"
-                                     style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.1s; animation-name: fadeInDownBig;"></a>
+                         data-wow-duration="1.5s" data-wow-delay=".1s"
+                         style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.1s; animation-name: fadeInDownBig;"></a>
         <p>
             Copyright © 2023 LunarCN All rights reserved
         </p>

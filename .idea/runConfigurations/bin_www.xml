@@ -2,6 +2,7 @@
   <configuration default="false" name="bin\www" type="NodeJSConfigurationType" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$/frontend">
     <envs>
       <env name="DEBUG" value="frontend:*" />
+      <env name="backend" value="http://127.0.0.1:8080/" />
     </envs>
     <EXTENSION ID="com.jetbrains.nodejs.run.NodeStartBrowserRunConfigurationExtension">
       <browser url="http://localhost:3000/" />

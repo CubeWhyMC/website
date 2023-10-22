@@ -89,8 +89,8 @@ public class WebController {
                     document.getElementById("id").innerHTML = latestVersion"
                 </script>`
                 * */
-                response.setContentType("text/plain");
-                response.getWriter().write(String.format("let latestVersion = \"%s\"", version));
+                response.setContentType("text/javascript");
+                response.getWriter().write(String.format("document.getElementById(\"latest\").innerHTML = \"%s\"", version));
                 break;
         }
     }
