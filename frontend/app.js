@@ -7,6 +7,7 @@ var logger = require('morgan');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 let capeRouter = require("./routes/cape");
+let innerPagesRouter = require("./routes/inner")
 let liquidLunarRouter = require("./routes/liquid");
 
 let app = express();
@@ -25,6 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cape', capeRouter);
 app.use("/liquid", liquidLunarRouter)
+app.use("/inner-pages", innerPagesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
