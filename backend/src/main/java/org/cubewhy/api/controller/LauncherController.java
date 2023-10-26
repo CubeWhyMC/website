@@ -63,9 +63,9 @@ public class LauncherController {
     }
 
     @PostMapping("reportLaunchStatus")
-    public void reportLaunchStatus(@RequestBody String hwid, @RequestBody String data, HttpServletResponse response) throws IOException {
+    public void reportLaunchStatus(HttpServletResponse response) throws IOException {
         response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write(RestBean.success(data).toJson());
+        response.getWriter().write(RestBean.success().toJson());
     }
 
     @GetMapping("download")
