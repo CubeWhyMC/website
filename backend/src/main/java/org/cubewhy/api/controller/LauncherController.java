@@ -37,7 +37,7 @@ public class LauncherController {
     }
 
     @PostMapping("launch")
-    public void launch(HttpServletRequest request, @NotNull HttpServletResponse response) throws IOException, ServletException {
+    public void launch(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws IOException, ServletException {
         String infoJson = utils.readAll(request.getReader());
         GameInfo info = JSONObject.parseObject(infoJson, GameInfo.class);
         response.setContentType("application/json;charset=UTF-8");
@@ -57,7 +57,7 @@ public class LauncherController {
     }
 
     @GetMapping("launch")
-    public void launch(HttpServletResponse response) throws IOException {
+    public void launch(@NotNull HttpServletResponse response) throws IOException {
         response.setContentType("application/json;charset=UTF-8");
         response.getWriter().write(RestBean.failure(HttpURLConnection.HTTP_BAD_METHOD, "Post needed").toJson());
     }
