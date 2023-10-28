@@ -6,11 +6,15 @@ router.get('/', function(req, res, next) {
   res.render('index', {});
 });
 
-router.get('/download', function(req, res, next) {
+router.get('/download/:v', function(req, res, next) {
+  res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/releases/" + req.params.v)
+});
+
+router.get("/download", (req, res) => {
   res.render('download', {
     api: process.env.backend
   });
-});
+})
 
 router.get('/help', function(req, res, next) {
   res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/wiki");
