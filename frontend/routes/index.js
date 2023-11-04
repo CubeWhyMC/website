@@ -6,6 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('index', {});
 });
 
+router.get('/farewell', function(req, res, next) {
+  res.render('farewell', {});
+});
+
 router.get('/download/:v', function(req, res, next) {
   res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/releases/" + req.params.v)
 });

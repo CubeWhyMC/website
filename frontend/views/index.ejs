@@ -28,22 +28,66 @@
             margin-right: 10px;
         }
 
+        #close-notification:target {
+            display: none
+        }
+
+        .notification__text {
+            align-self: center;
+            flex: 1 1 auto;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.2em;
+            padding-top: 12px;
+            padding-bottom: 12px
+        }
+
+        .notification__close {
+            align-self: stretch;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            margin-left: auto;
+            cursor: pointer
+        }
+
+        .notification {
+            display: flex;
+            justify-content: center;
+            padding-left: 45px;
+            background-color: #02303A;
+            text-align: center;
+            color: white;
+        }
+
     </style>
-<!--    <script>-->
-<!--        var _hmt = _hmt || [];-->
-<!--        (function () {-->
-<!--            var hm = document.createElement("script");-->
-<!--            hm.src = "https://hm.baidu.com/hm.js?ef9c555938fd3d70ea01c9648d1860d3";-->
-<!--            var s = document.getElementsByTagName("script")[0];-->
-<!--            s.parentNode.insertBefore(hm, s);-->
-<!--        })();-->
-<!--    </script>-->
+    <!--    <script>-->
+    <!--        var _hmt = _hmt || [];-->
+    <!--        (function () {-->
+    <!--            var hm = document.createElement("script");-->
+    <!--            hm.src = "https://hm.baidu.com/hm.js?ef9c555938fd3d70ea01c9648d1860d3";-->
+    <!--            var s = document.getElementsByTagName("script")[0];-->
+    <!--            s.parentNode.insertBefore(hm, s);-->
+    <!--        })();-->
+    <!--    </script>-->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </head>
 <body>
 <header class="header">
     <a href="#" class="logo" alt="LunarCN">LunarCN</a>
+    <div class="notification" id="close-notification">
+<span class="notification__text">告别LunarCN <a href="/farewell">Farewell</a>
+</span>
+        <a id="notification-close" class="notification__close" href="#close-notification">
+            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><title>close</title>
+                <path d="M12.082.94L.918 12.06M12.06 12.082L.94.918" stroke="#FFF" fill="none" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+            </svg>
+        </a>
+    </div>
 
     <div class="language-selector">
         <label>
