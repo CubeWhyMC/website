@@ -13,6 +13,7 @@ import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,7 +42,7 @@ public class SkinController {
     @GetMapping("/raw/{uuid}")
     public void raw(HttpServletRequest request, HttpServletResponse response, @PathVariable String uuid) throws Exception {
         // do request
-        ClientHttpRequest delegate = httpRequestFactory.createRequest(URI.create(skinApi + uuid), HttpMethod.GET);
+        ClientHttpRequest req1 = httpRequestFactory.createRequest(URI.create(skinApi + uuid), HttpMethod.GET);
         Enumeration<String> headerNames = request.getHeaderNames();
         while (headerNames.hasMoreElements()) {
             String headerName = headerNames.nextElement();
@@ -50,9 +51,9 @@ public class SkinController {
             while (v.hasMoreElements()) {
                 arr.add(v.nextElement());
             }
-            delegate.getHeaders().addAll(headerName, arr);
+            req1.getHeaders().addAll(headerName, arr);
         }
-        try (ClientHttpResponse res = delegate.execute()) {
+        try (ClientHttpResponse res = req1.execute()) {
             int statusCode = res.getStatusCode().value();
             response.setStatus(statusCode);
             String rawJson = utils.readAll(res.getBody());
@@ -63,7 +64,11 @@ public class SkinController {
                 // do decode
                 JSONObject decoded = JSONObject.parse(new String(Base64.getDecoder().decode(rawBase64), StandardCharsets.UTF_8));
                 String targetUrl = decoded.getJSONObject("textures").getJSONObject("SKIN").getString("url");
-                response.sendRedirect(targetUrl);
+                // send request
+                ClientHttpRequest req2 = httpRequestFactory.createRequest(URI.create(targetUrl), HttpMethod.GET);
+                try (ClientHttpResponse res1 = req2.execute()) {
+                    StreamUtils.copy(res1.getBody(), response.getOutputStream());
+                }
 
             } else {
                 response.getWriter().write(RestBean.failure(statusCode, "Not a valid UUID or not found").toJson());
