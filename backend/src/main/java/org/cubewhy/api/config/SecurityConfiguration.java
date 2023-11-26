@@ -46,6 +46,7 @@ public class SecurityConfiguration {
                                 .requestMatchers("/launcher/**").permitAll()
                                 .requestMatchers("/capes/**").permitAll()
                                 .requestMatchers("/game/**").permitAll()
+                                .requestMatchers("/skin/**").permitAll()
                                 .requestMatchers("/plugins/**").permitAll()
                                 .requestMatchers("/market/**").permitAll()
                                 .requestMatchers("/api/liquid/**").permitAll()

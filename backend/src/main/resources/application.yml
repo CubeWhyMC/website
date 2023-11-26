@@ -1,3 +1,7 @@
+# Fake LunarAPI config
+# https://github.com/CubeWhyMC/website
+
+### Spring config ###
 spring:
   mvc:
     static-path-pattern: /static/**
@@ -10,17 +14,14 @@ spring:
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
-#server:
-#  ssl:
-#    key-store: classpath:keystore.p12
-#    key-store-type: PKCS12
-#    key-alias: tomcat
-#    key-store-password: 123456
+### Pay redirect Config ###
 pay:
   unknown: https://lunarclient.top/donate
   wechat:
   qq:
   alipay:
+### API config ###
 api:
   version: https://api.github.com/repos/CubeWhyMC/LunarClient-CN/releases
+  skin: https://sessionserver.mojang.com/session/minecraft/profile/
   error: "{\"success\": false, \"error\":  {\"short\":  \"%title%\", \"message\":  \"%msg%\", \"code\": \"%code%\"}}"
