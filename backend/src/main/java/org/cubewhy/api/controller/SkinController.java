@@ -69,8 +69,8 @@ public class SkinController {
                 try (ClientHttpResponse res1 = req2.execute()) {
                     StreamUtils.copy(res1.getBody(), response.getOutputStream());
                 }
-
             } else {
+                response.setContentType("application/json; charset=UTF-8");
                 response.getWriter().write(RestBean.failure(statusCode, "Not a valid UUID or not found").toJson());
             }
         }
