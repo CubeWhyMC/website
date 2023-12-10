@@ -14,6 +14,10 @@ router.get('/download/:v', function(req, res, next) {
   res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/releases/" + req.params.v)
 });
 
+router.get("/thanks", function(req, res) {
+  res.render("thanks"); // process link in the frontend
+})
+
 router.get("/download", (req, res) => {
   res.render('download', {
     api: process.env.backend
@@ -37,5 +41,9 @@ router.get('/en/download', function(req, res, next) {
 router.get("/donate", function(req, res) {
   res.render("donate", {})
 });
+
+router.get("/celestial", function(req, res) {
+  res.redirect("https://github.com/cubewhy/celestial");
+})
 
 module.exports = router;
