@@ -5,6 +5,26 @@
     <title>LunarCN Client | 错误报告查看器</title>
 </head>
 <body>
-
+<h1>错误报告信息</h1>
+<p>错误报告ID: <%= crashID %></p>
+<h2>错误报告内容</h2>
+<pre>
+<%= trace %>
+</pre>
+<div id="areaLaunchScript">
+    <h2>启动脚本</h2>
+    <pre id="ls">
+    </pre>
+</div>
+<script>
+    // 给某些乐子人写的: 这里是后端扔过来的数据, 没有就是"", 不是弱智代码.
+    let ls = "<%= launchScript %>"
+    if (ls === "") {
+        console.log("Launch script field was hidden");
+        document.getElementById("areaLaunchScript").hidden = true; // hide launch script field
+    } else {
+        document.getElementById("ls").innerText = ls;
+    }
+</script>
 </body>
 </html>

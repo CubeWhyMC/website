@@ -14,7 +14,7 @@ router.get('/farewell', function (req, res, next) {
 
 router.get("/crash", async function (req, res) {
     let crashID = req.query["id"];
-    if (crashID === null) {
+    if (crashID === undefined) {
         let requestURL = process.env.backendLocal + "launcher/getCrashReport"
         try {
             let axiosResponse = await axios.get(requestURL);
@@ -31,21 +31,25 @@ router.get("/crash", async function (req, res) {
     } else {
         let requestURL = process.env.backendLocal + "launcher/getCrashReport?id=" + crashID
         // TODO request the api server to get info
-        try {
-            let axiosResponse = await axios.get(requestURL);
-            let data = axiosResponse.data["data"]
+        await axios.get(requestURL).then(axiosResponse => {
+            let data = axiosResponse.data["data"];
             let trace = data["trace"];
             let type = data["type"];
+            let launchScript = data["launchScript"]
             res.render("crash/result", {
-                id: crashID,
+                crashID: crashID,
                 trace: trace,
-                type: type
+                type: type,
+                launchScript: launchScript
             })
-        } catch (e) {
-            // api is unreachable
-            console.error("API was unreachable");
-            console.error(e);
-        }
+        }).catch(e => {
+            res.render("crash/result", {
+                crashID: "not-found",
+                trace: `Crash ID ${crashID} not found`,
+                type: "web",
+                launchScript: null
+            })
+        });
     }
 })
 
