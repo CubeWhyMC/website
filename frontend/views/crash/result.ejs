@@ -14,21 +14,13 @@
 <pre>
 <%= trace %>
 </pre>
-<div id="areaLaunchScript">
+<div id="areaLaunchScript" hidden>
     <h2>启动脚本</h2>
     <pre id="ls">
+<%= launchScript %>
     </pre>
 </div>
 <script>
-    // 给某些乐子人写的: 这里是后端扔过来的数据, 没有就是"", 不是弱智代码.
-    let ls = "<%= launchScript %>"
-    if (ls === "") {
-        console.log("Launch script field was hidden");
-        document.getElementById("areaLaunchScript").hidden = true; // hide launch script field
-    } else {
-        document.getElementById("ls").innerText = ls;
-    }
-
     document.getElementById("crashTime").innerHTML = new Date(<%= time %>).toDateString();
     let crashType = "<%= type %>";
     let text = crashType;
@@ -40,6 +32,7 @@
             text = "启动器错误"
             break;
         case "game":
+            document.getElementById("areaLaunchScript").hidden = false;
             text = "游戏错误";
             break;
     }
