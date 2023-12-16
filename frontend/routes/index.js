@@ -56,7 +56,7 @@ router.get("/crash", async function (req, res) {
     }
 })
 
-router.get('/download/:v', function (req, res, next) {
+router.get('/download/:v', function (req, res) {
     res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/releases/" + req.params.v)
 });
 
@@ -89,7 +89,8 @@ router.get("/donate", function (req, res) {
 });
 
 router.get("/celestial", function (req, res) {
-    res.render("celestial/index")
+    // res.render("celestial/index")
+    res.redirect("https://github.com/CubeWhyMC/celestial")
 })
 
 router.get("/new", function (req, res) {
