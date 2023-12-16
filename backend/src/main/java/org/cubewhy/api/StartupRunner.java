@@ -32,6 +32,7 @@ public class StartupRunner implements CommandLineRunner {
         addonFolder.mkdirs();
         branchesFolder.mkdirs();
         liquidLunarFolder.mkdirs();
+        crashReportFolder.mkdirs();
         capeFolder.mkdirs();
         artifactsFolder.mkdirs();
         utils.extractFile("api/metadata.json", configPath + "/metadata.json");

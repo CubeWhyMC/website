@@ -24,4 +24,5 @@ pay:
 api:
   version: https://api.github.com/repos/CubeWhyMC/LunarClient-CN/releases
   skin: https://sessionserver.mojang.com/session/minecraft/profile/
+  viewCrashReport: https://www.lunarclient.top/crash
   error: "{\"success\": false, \"error\":  {\"short\":  \"%title%\", \"message\":  \"%msg%\", \"code\": \"%code%\"}}"

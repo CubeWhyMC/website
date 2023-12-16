@@ -34,5 +34,10 @@
       "name": "api.skin",
       "type": "java.lang.String",
       "description": "Minecraft skin API, support proxies."
+    },
+    {
+      "name": "api.viewCrashReport",
+      "type": "java.lang.String",
+      "description": "Front url of crash report viewer."
     }
   ] }

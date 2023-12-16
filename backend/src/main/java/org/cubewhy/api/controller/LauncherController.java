@@ -5,6 +5,8 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.cubewhy.api.entity.CrashReport;
 import org.cubewhy.api.entity.GameInfo;
 import org.cubewhy.api.entity.RestBean;
 import org.cubewhy.api.utils.FileUtils;
@@ -14,19 +16,25 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.util.UUID;
 
 import static org.cubewhy.api.BackendApplication.*;
 
 @RestController
 @RequestMapping("/launcher")
+@Slf4j
 public class LauncherController {
     @Resource
     TextUtils utils;
     @Resource
     FileUtils fileUtils;
+
+    @Value("${api.viewCrashReport}")
+    String crashReportViewURL;
 
     @GetMapping("metadata")
     public void metadata(HttpServletRequest request, @NotNull HttpServletResponse response) throws IOException {
@@ -74,5 +82,26 @@ public class LauncherController {
         File file = new File(artifactsFolder, name);
         // send download
         fileUtils.sendDownload(file, response);
+    }
+
+    @PostMapping("uploadCrashReport")
+    public void uploadCrashReport(HttpServletResponse response, @RequestBody CrashReport body) throws IOException {
+        UUID id = UUID.randomUUID();
+        log.info("Receive crash report, id = " + id);
+        JSONObject json = new JSONObject();
+        json.put("id", id.toString());
+        json.put("message", "success");
+        json.put("url", crashReportViewURL + "/?id=" + id);
+        // dump the report
+        try (FileWriter writer = new FileWriter(new File(crashReportFolder, id + ".json"))) {
+            JSONObject result = new JSONObject();
+            result.put("trace", body.getTrace());
+            result.put("type", body.getType());
+            result.put("launch-script", body.getLaunchScript());
+            writer.write(result.toJSONString());
+        }
+
+        response.setContentType("application/json; charset=utf-8");
+        response.getWriter().write(RestBean.success(json).toJson());
     }
 }
