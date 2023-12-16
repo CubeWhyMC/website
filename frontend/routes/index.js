@@ -36,7 +36,7 @@ router.get("/crash", async function (req, res) {
             let trace = data["trace"];
             let type = data["type"];
             let time = data["time"];
-            let launchScript = data["launchScript"]
+            let launchScript = data["launch-script"]
             res.render("crash/result", {
                 crashID: crashID,
                 trace: trace,
