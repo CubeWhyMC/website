@@ -112,8 +112,8 @@ public class LauncherController {
         if (id == null) {
             // return a list of all crash reports
             File[] files = crashReportFolder.listFiles();
+            response.setContentType("application/json; charset=UTF-8");
             if (files == null) {
-                response.setContentType("application/json; charset=UTF-8");
                 response.setStatus(501);
                 response.getWriter().write(RestBean.failure(501, "Not Implemented").toJson());
                 return;
