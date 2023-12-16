@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="/stylesheets/crash.css" type="text/css">
     <script>
         function findReport() {
-            let idFromInput = document.getElementById("crashID").value
-            console.log(idFromInput);
+            let idFromInput = document.getElementById("crashID").value;
+            window.location.href = "/crash?id=" + idFromInput;
         }
         function toggleList() {
             document.getElementById("btnToggle").hidden = true;
