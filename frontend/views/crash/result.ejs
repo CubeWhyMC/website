@@ -7,6 +7,8 @@
 <body>
 <h1>错误报告信息</h1>
 <p>错误报告ID: <%= crashID %></p>
+<p>崩溃日期: <label id="crashTime"></label></p>
+<p>崩溃类型: <label id="crashType"></label></p>
 <h2>错误报告内容</h2>
 <pre>
 <%= trace %>
@@ -25,6 +27,22 @@
     } else {
         document.getElementById("ls").innerText = ls;
     }
+
+    document.getElementById("crashTime").innerHTML = new Date(<%= time %>).toDateString();
+    let crashType = "<%= type %>";
+    let text = crashType;
+    switch (crashType) {
+        case "web":
+            text = "网页后端错误";
+            break;
+        case "launcher":
+            text = "启动器错误"
+            break;
+        case "game":
+            text = "游戏错误";
+            break;
+    }
+    document.getElementById("crashType").innerHTML = text;
 </script>
 </body>
 </html>

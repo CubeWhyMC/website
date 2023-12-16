@@ -19,7 +19,7 @@ router.get("/crash", async function (req, res) {
         try {
             let axiosResponse = await axios.get(requestURL);
             let reports = axiosResponse.data["data"];
-            res.render("crash/list", {
+            res.render("crash/index", {
                 id: crashID,
                 reports: reports
             });
@@ -35,11 +35,13 @@ router.get("/crash", async function (req, res) {
             let data = axiosResponse.data["data"];
             let trace = data["trace"];
             let type = data["type"];
+            let time = data["time"];
             let launchScript = data["launchScript"]
             res.render("crash/result", {
                 crashID: crashID,
                 trace: trace,
                 type: type,
+                time: time,
                 launchScript: launchScript
             })
         }).catch(e => {
@@ -47,6 +49,7 @@ router.get("/crash", async function (req, res) {
                 crashID: "not-found",
                 trace: `Crash ID ${crashID} not found`,
                 type: "web",
+                time: new Date().getTime(),
                 launchScript: null
             })
         });

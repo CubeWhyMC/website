@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.nio.charset.StandardCharsets;
+import java.util.Date;
 import java.util.UUID;
 
 import static org.cubewhy.api.BackendApplication.*;
@@ -100,6 +101,7 @@ public class LauncherController {
             result.put("trace", body.getTrace());
             result.put("type", body.getType());
             result.put("launch-script", body.getLaunchScript());
+            result.put("time", new Date().getTime());
             writer.write(result.toJSONString());
         }
 
