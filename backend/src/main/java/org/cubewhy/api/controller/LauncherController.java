@@ -1,5 +1,6 @@
 package org.cubewhy.api.controller;
 
+import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
@@ -20,6 +21,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 import static org.cubewhy.api.BackendApplication.*;
@@ -103,5 +105,35 @@ public class LauncherController {
 
         response.setContentType("application/json; charset=utf-8");
         response.getWriter().write(RestBean.success(json).toJson());
+    }
+
+    @GetMapping("getCrashReport")
+    public void getCrashReport(HttpServletResponse response, @RequestParam(required = false) String id) throws IOException {
+        if (id == null) {
+            // return a list of all crash reports
+            File[] files = crashReportFolder.listFiles();
+            if (files == null) {
+                response.setContentType("application/json; charset=UTF-8");
+                response.setStatus(501);
+                response.getWriter().write(RestBean.failure(501, "Not Implemented").toJson());
+                return;
+            }
+            JSONArray list = new JSONArray();
+            for (File file : files) {
+                String crashID = file.getName().split("\\.")[0];
+                list.add(crashID);
+            }
+            response.getWriter().write(RestBean.success(list).toJson());
+        } else {
+            File report = new File(crashReportFolder, id + ".json");
+            response.setContentType("application/json; charset=UTF-8");
+            if (!report.exists()) {
+                response.setStatus(404);
+                response.getWriter().write(RestBean.failure(404, "Not found").toJson());
+                return;
+            }
+            String json = org.apache.commons.io.FileUtils.readFileToString(report, StandardCharsets.UTF_8);
+            response.getWriter().write(RestBean.success(JSONObject.parse(json)).toJson());
+        }
     }
 }
