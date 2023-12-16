@@ -43,7 +43,11 @@ router.get("/donate", function(req, res) {
 });
 
 router.get("/celestial", function(req, res) {
-  res.redirect("https://github.com/cubewhy/celestial");
+  res.render("celestial/index")
+})
+
+router.get("/new", function(req, res) {
+  res.redirect("/celestial")
 })
 
 module.exports = router;
