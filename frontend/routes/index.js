@@ -1,5 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const axios = require("axios");
+const {json} = require("express");
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -10,22 +12,40 @@ router.get('/farewell', function (req, res, next) {
     res.render('farewell', {});
 });
 
-router.get("/crash", function (req, res) {
+router.get("/crash", async function (req, res) {
     let crashID = req.query["id"];
-    // TODO request the api server to get info
-    let requestURL = process.env.backend + "launcher/getCrashReport"
-    let trace = "";
-    let type = "";
     if (crashID === null) {
-        res.render("crash/list", {
-            id: crashID,
-            trace: trace,
-            type: type
-        });
+        let requestURL = process.env.backendLocal + "launcher/getCrashReport"
+        try {
+            let axiosResponse = await axios.get(requestURL);
+            let reports = axiosResponse.data["data"];
+            res.render("crash/list", {
+                id: crashID,
+                reports: reports
+            });
+        } catch (e) {
+            // api is unreachable
+            console.error("API was unreachable");
+            console.error(e);
+        }
     } else {
-        res.render("crash/result", {
-
-        })
+        let requestURL = process.env.backendLocal + "launcher/getCrashReport?id=" + crashID
+        // TODO request the api server to get info
+        try {
+            let axiosResponse = await axios.get(requestURL);
+            let data = axiosResponse.data["data"]
+            let trace = data["trace"];
+            let type = data["type"];
+            res.render("crash/result", {
+                id: crashID,
+                trace: trace,
+                type: type
+            })
+        } catch (e) {
+            // api is unreachable
+            console.error("API was unreachable");
+            console.error(e);
+        }
     }
 })
 

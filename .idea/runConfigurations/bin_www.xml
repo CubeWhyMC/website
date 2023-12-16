@@ -3,6 +3,7 @@
     <envs>
       <env name="DEBUG" value="frontend:*" />
       <env name="backend" value="http://127.0.0.1:8080/" />
+      <env name="backendLocal" value="http://127.0.0.1:8080/" />
     </envs>
     <EXTENSION ID="com.jetbrains.nodejs.run.NodeStartBrowserRunConfigurationExtension">
       <browser url="http://localhost:3000/" />
