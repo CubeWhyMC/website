@@ -20,6 +20,15 @@
 <%= launchScript %>
     </pre>
 </div>
+<div id="areaGo" hidden>
+    <h2>快速跳转</h2>
+    <a href="/crash">查看所有错误报告</a>
+    <h3>或查看指定的一个报告</h3>
+    <form>
+        <label for="inputId">崩溃ID: </label><input id="inputId" name="id"><br>
+        <button>GO</button>
+    </form>
+</div>
 <script>
     document.getElementById("crashTime").innerHTML = new Date(<%= time %>).toDateString();
     let crashType = "<%= type %>";
@@ -27,6 +36,7 @@
     switch (crashType) {
         case "web":
             text = "网页后端错误";
+            document.getElementById("areaGo").hidden = false;
             break;
         case "launcher":
             text = "启动器错误"
@@ -36,6 +46,7 @@
             text = "游戏错误";
             break;
     }
+    document.getElementById("inputId").value = new URL(window.location.href).searchParams.get("id");
     document.getElementById("crashType").innerHTML = text;
 </script>
 </body>
