@@ -56,9 +56,17 @@ router.get("/crash", async function (req, res) {
     }
 })
 
-router.get('/download/:v', function (req, res) {
-    res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/releases/" + req.params.v)
+router.get("/download/old", function (req, res) {
+    res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/releases/latest");
+})
+router.get('/download/old/:v', function (req, res) {
+    res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/releases/" + req.params.v);
 });
+
+router.get('/download/:v', function (req, res) {
+    res.redirect("https://github.com/CubeWhyMC/celestial/releases/" + req.params.v);
+});
+
 
 router.get("/thanks", function (req, res) {
     res.render("thanks"); // process link in the frontend
@@ -71,7 +79,7 @@ router.get("/download", (req, res) => {
 })
 
 router.get('/help', function (req, res, next) {
-    res.redirect("https://github.com/CubeWhyMC/LunarClient-CN/wiki");
+    res.redirect("https://muskf.github.io/docs"); // by xrk
 });
 
 router.get('/en', function (req, res, next) {
