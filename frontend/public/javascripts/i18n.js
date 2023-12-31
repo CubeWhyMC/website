@@ -1,7 +1,3 @@
-/*
-https://github.com/muskf/site/blob/main/i18n.js
-muskf
-* */
 function detectUserLanguage() {
     const userLanguage = navigator.language || navigator.userLanguage || 'en';
     return userLanguage;
@@ -25,7 +21,7 @@ function loadLanguageResources() {
                 const key = element.getAttribute('data-i18n');
                 const translation = data[key];
                 if (translation) {
-                    element.textContent = translation;
+                    element.innerHTML = translation.replace(/\n/g, '<br>');
                 }
             });
         });

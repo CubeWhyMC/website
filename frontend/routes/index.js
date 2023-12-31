@@ -8,9 +8,9 @@ router.get('/', function (req, res, next) {
     res.render('index', {});
 });
 
-router.get('/farewell', function (req, res, next) {
-    res.render('farewell', {});
-});
+// router.get('/farewell', function (req, res, next) {
+//     res.render('farewell', {});
+// });
 
 router.get("/crash", async function (req, res) {
     let crashID = req.query["id"];
@@ -79,30 +79,30 @@ router.get("/download", (req, res) => {
 })
 
 router.get('/help', function (req, res, next) {
-    res.redirect("https://muskf.github.io/docs"); // by xrk
+    res.redirect("https://mc.lunarclient.top/docs"); // by xrk
 });
 
-router.get('/en', function (req, res, next) {
-    res.render('index-en', {});
-});
-
-router.get('/en/download', function (req, res, next) {
-    res.render('download-en', {
-        api: process.env.backend
-    });
-});
+// router.get('/en', function (req, res, next) {
+//     res.render('index-en', {});
+// });
+//
+// router.get('/en/download', function (req, res, next) {
+//     res.render('download-en', {
+//         api: process.env.backend
+//     });
+// });
 
 router.get("/donate", function (req, res) {
     res.render("donate", {})
 });
 
-router.get("/celestial", function (req, res) {
-    // res.render("celestial/index")
-    res.redirect("https://github.com/CubeWhyMC/celestial")
-})
+// router.get("/celestial", function (req, res) {
+//     // res.render("celestial/index")
+//     res.redirect("https://github.com/CubeWhyMC/celestial")
+// })
 
-router.get("/new", function (req, res) {
-    res.redirect("/celestial")
-})
+// router.get("/new", function (req, res) {
+//     res.redirect("/celestial")
+// })
 
 module.exports = router;
