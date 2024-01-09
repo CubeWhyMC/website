@@ -4,10 +4,7 @@ import com.alibaba.fastjson2.JSONObject;
 import jakarta.servlet.http.HttpServletResponse;
 import org.cubewhy.api.entity.RestBean;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,5 +34,10 @@ public class AdminController {
         JSONObject json = new JSONObject();
         json.put("path", "/plugins/download" + file.getPath().replace(addonFolder.getPath(), ""));
         writer.write(RestBean.success(json).toJson()); // Ok
+    }
+
+    @GetMapping("updateOfficial")
+    public void updateOfficial(String version, String module, String branch) {
+        // TODO update official
     }
 }
