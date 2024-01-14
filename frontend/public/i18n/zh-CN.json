@@ -10,7 +10,7 @@
     "about-title":"关于Celestial",
     "about-content1":"Celestial是由CubeWhyMC开发的Minecraft启动器,主要用于启动LunarClient\n如果你喜欢, 请给一个star",
     "about-features":"Celestial有什么功能?",
-    "about-features-content": "完全开源(GPLv3)\n无需Electron\n无需安装,开箱即用\n支持外部浏览器登录\n跨平台\n自定义API地址(仅限LunarCN API)\n多版本支持，一个jre\nJavaagent支持(实验)\nLunarCN支持(还没做好)\nWeave支持(仅dev分支)",
+    "about-features-content": "完全开源(GPLv3)\n无需Electron\n无需安装,开箱即用\n支持外部浏览器登录\n跨平台\n自定义API地址(仅完全支持LunarCN API)\n多版本支持，一个jre\nJavaagent支持(实验)\nLunarCN支持(还没做好)\nWeave支持",
     "launcher-case-title":"特色",
     "case-title1":"简洁的页面",
     "case-content1":"摆脱掉不必要的臃肿页面,专为启动游戏打造。您只需要双击Jar文件,即可快速启动。",
