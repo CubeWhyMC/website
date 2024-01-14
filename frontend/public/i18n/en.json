@@ -10,7 +10,7 @@
     "about-title":"About Celestial",
     "about-content1":"Celestial is a Minecraft launcher developed by CubeWhyMC, which is used to launch the LunarClient.\nIf you like it, please give it a star",
     "about-features":"What does Celestial do?",
-    "about-features-content": "Fully open source (GPLv3)\n No Electron\n no installation, out of the box \n support for external browser login\n Cross-platform \n custom API address (LunarCN API only)\n multi-version support, A jre\nJavaagent support (experimental)\nLunarCN support (working)\nWeave support (dev branch)",
+    "about-features-content": "Fully open source (GPLv3)\n No Electron\n no installation, out of the box \n support for external browser login\n Cross-platform \n custom API address\n multi-version support, one jre\nJavaagent support (experimental)\nLunarCN support\nWeave support",
     "launcher-case-title":"Features",
     "case-title1":" Tidy page ",
     "case-content1":" Get rid of unnecessary bloated pages, built for launching games. You just need to double-click the Jar file and it'll starts quickly.",
