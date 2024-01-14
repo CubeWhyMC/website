@@ -26,29 +26,29 @@ public class AddonFileListener extends FileAlterationListenerAdaptor {
     public static void addFile(File file) throws IOException {
         JSONObject json = new JSONObject();
         ;
-        try (JarFile jar = new JarFile(file)) {
-            // try to get lunarcn.meta.json
-            try {
-                InputStream stream = jar.getInputStream(jar.getEntry("lunarcn.meta.json"));
-                String meta = utils.readAll(stream);
-                json.put("meta", meta);
-            } catch (Exception e) {
-                // Too lazy...
-            }
-        }
         json.put("name", file.getName());
         json.put("category", getAddonType(file));
         json.put("downloadLink", "/plugins/download?path=" + URLEncoder.encode(file.getPath().replace(addonFolder.getPath(), "").replace("\\", "/"), StandardCharsets.UTF_8).replace("%2F", "/"));
+        try (JarFile jar = new JarFile(file)) {
+            // try to get addon.meta.json
+            InputStream stream = jar.getInputStream(jar.getEntry("addon.meta.json"));
+            String meta = utils.readAll(stream);
+            json.put("meta", meta);
+        } catch (Exception e) {
+            // Too lazy...
+            json.put("meta", null);
+        }
         addons.add(json);
     }
 
     private static String getAddonType(File file) {
         return switch (file.getParentFile().getName()) {
-            case "mods" -> "Mod";
+            case "mods" -> "weave";
+            case "cn" -> "cn";
             case "javaagents" -> "Agent";
             default ->
                 // Unreachable
-                    "Unknown";
+                    file.getParentFile().getName();
         };
     }
 
