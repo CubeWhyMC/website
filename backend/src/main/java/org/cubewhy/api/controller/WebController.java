@@ -5,6 +5,7 @@ import com.alibaba.fastjson2.JSONObject;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.websocket.server.PathParam;
 import org.cubewhy.api.entity.RestBean;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+
+import static org.cubewhy.api.StartupRunner.counter;
 
 @RestController
 @RequestMapping("/api/web")
@@ -49,6 +52,12 @@ public class WebController {
             target = targetAlipay;
         }
         response.sendRedirect(target);
+    }
+
+    @GetMapping("invoke")
+    public void invoke(HttpServletResponse response, @PathParam("api") String api) throws IOException {
+        response.setContentType("application/json");
+        response.getWriter().write(RestBean.success(counter.getCount(api)).toJson());
     }
 
     @GetMapping("latest")

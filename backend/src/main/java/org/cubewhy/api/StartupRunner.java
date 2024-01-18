@@ -3,12 +3,14 @@ package org.cubewhy.api;
 import jakarta.annotation.Resource;
 import org.apache.commons.io.monitor.FileAlterationMonitor;
 import org.apache.commons.io.monitor.FileAlterationObserver;
+import org.cubewhy.api.files.InvokeCount;
 import org.cubewhy.api.utils.AddonFileListener;
 import org.cubewhy.api.utils.FileUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.net.ssl.*;
+import java.io.File;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
@@ -19,6 +21,8 @@ public class StartupRunner implements CommandLineRunner {
     @Resource
     FileUtils utils;
     FileAlterationMonitor monitor = new FileAlterationMonitor(10000L);
+
+    public static final InvokeCount counter = new InvokeCount(new File(configPath, "invoke-counter.json"));
 
     /**
      * Callback used to run the bean.

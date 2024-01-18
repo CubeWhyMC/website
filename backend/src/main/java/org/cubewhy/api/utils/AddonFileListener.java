@@ -41,10 +41,11 @@ public class AddonFileListener extends FileAlterationListenerAdaptor {
         addons.add(json);
     }
 
-    private static String getAddonType(File file) {
+    private static String getAddonType(@NotNull File file) {
         return switch (file.getParentFile().getName()) {
             case "mods" -> "weave";
             case "cn" -> "cn";
+            case "fabric" -> "fabric";
             case "javaagents" -> "Agent";
             default ->
                 // Unreachable
@@ -52,7 +53,7 @@ public class AddonFileListener extends FileAlterationListenerAdaptor {
         };
     }
 
-    private void walkDir(File dir) throws IOException {
+    private void walkDir(@NotNull File dir) throws IOException {
         File[] files = dir.listFiles();
         if (files != null) {
             for (File file : files) {

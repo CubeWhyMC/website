@@ -9,4 +9,6 @@ public class GameInfo implements BaseData {
     String version;
     String branch;
     String module;
+    String os;
+    String arch;
 }

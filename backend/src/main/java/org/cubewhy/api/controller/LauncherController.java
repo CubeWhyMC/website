@@ -26,6 +26,7 @@ import java.util.Date;
 import java.util.UUID;
 
 import static org.cubewhy.api.BackendApplication.*;
+import static org.cubewhy.api.StartupRunner.counter;
 
 @RestController
 @RequestMapping("/launcher")
@@ -55,6 +56,9 @@ public class LauncherController {
         String json = null;
         // return download url
         // Find at <configDir>/<branch>/<version>-<module>.json
+        // 拼接下载链接
+        counter.addCount("launcher/launch");
+
         InputStream stream = fileUtils.getExternalFile(branchesFolder + String.format("/%s/%s-%s.json", info.getBranch(), info.getVersion(), info.getModule()));
         if (stream != null) {
             json = utils.readAll(stream);
@@ -138,4 +142,6 @@ public class LauncherController {
             response.getWriter().write(RestBean.success(JSONObject.parse(json)).toJson());
         }
     }
+
+
 }
