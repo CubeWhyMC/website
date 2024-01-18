@@ -119,12 +119,30 @@
           <div class="text-white" data-mdb-theme="dark">
             <h1 class="mb-3" data-i18n="poop1">Celestial—Your next Minecraft launcher</h1>
             <h5 class="mb-4" data-i18n="poop2">Open Source & Free</h5>
+            <p><label class="mb-4" data-i18n="launch-count"></label><label id="count">UNKNOWN (API disconnected)</label></p>
             <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="#"
               role="button" data-i18n="btn-download" onclick="window.open('/download')">Download</a>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      // 使用JavaScript进行API请求和更新页面元素
+      const countLabel = document.getElementById('count');
+
+      // 发起API请求
+      fetch('<%= api %>api/web/invoke?api=launcher/launch')
+              .then(response => response.json())
+              .then(data => {
+                // 更新页面上的元素
+                countLabel.textContent = data.data;
+              })
+              .catch(error => {
+                console.error('Error fetching data (invoke-count):', error);
+              });
+    </script>
+
     <!-- Background image -->
   </header>
   <!--Main Navigation-->
@@ -176,7 +194,7 @@
                 <p class="card-text" data-i18n="case-content1">
                   <!-- content1 -->
                 </p>
-                <a href="#!" class="btn btn-primary scrollToTopButton" data-mdb-ripple-init data-i18n="case-download">Button</a>
+                <a href="#!" class="btn btn-primary scrollToTopButton" data-mdb-ripple-init data-i18n="case-download">DOWNLOAD</a>
               </div>
             </div>
           </div>
@@ -194,7 +212,7 @@
                 <p class="card-text" data-i18n="case-content2">
                   <!-- content2 -->
                 </p>
-                <a href="#!" class="btn btn-primary scrollToTopButton" data-mdb-ripple-init data-i18n="case-download">Button</a>
+                <a href="#!" class="btn btn-primary scrollToTopButton" data-mdb-ripple-init data-i18n="case-download">DOWNLOAD</a>
               </div>
             </div>
           </div>
@@ -212,7 +230,7 @@
                 <p class="card-text" data-i18n="case-content3">
                   <!-- content3 -->
                 </p>
-                <a href="https://discord.gg/rCqCepgWJc" class="btn btn-primary" data-mdb-ripple-init data-i18n="case-join">Button</a>
+                <a href="https://discord.gg/rCqCepgWJc" class="btn btn-primary" data-mdb-ripple-init data-i18n="case-join">DOWNLOAD</a>
               </div>
             </div>
           </div>
