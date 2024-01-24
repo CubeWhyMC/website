@@ -23,7 +23,7 @@ public class AddonFileListener extends FileAlterationListenerAdaptor {
         walkDir(addonFolder);
     }
 
-    public static void addFile(File file) throws IOException {
+    public static void addFile(File file) {
         JSONObject json = new JSONObject();
         ;
         json.put("name", file.getName());
