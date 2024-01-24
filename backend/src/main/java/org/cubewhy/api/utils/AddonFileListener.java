@@ -33,7 +33,7 @@ public class AddonFileListener extends FileAlterationListenerAdaptor {
             // try to get addon.meta.json
             InputStream stream = jar.getInputStream(jar.getEntry("addon.meta.json"));
             String meta = utils.readAll(stream);
-            json.put("meta", meta);
+            json.put("meta", JSONObject.parse(meta));
         } catch (Exception e) {
             // Too lazy...
             json.put("meta", null);
