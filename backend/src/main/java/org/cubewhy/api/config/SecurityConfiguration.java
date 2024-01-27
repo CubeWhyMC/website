@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.cubewhy.api.entity.Account;
 import org.cubewhy.api.entity.AuthorizeVO;
 import org.cubewhy.api.entity.RestBean;
+import org.cubewhy.api.filter.InvokeCountFilter;
 import org.cubewhy.api.filter.JwtAuthorizeFilter;
 import org.cubewhy.api.service.impl.AccountServiceImpl;
 import org.cubewhy.api.utils.JwtUtils;
@@ -20,6 +21,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.intercept.AuthorizationFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.io.IOException;
@@ -35,6 +37,8 @@ public class SecurityConfiguration {
     JwtUtils jwtUtils;
     @Resource
     JwtAuthorizeFilter filter;
+    @Resource
+    InvokeCountFilter invokeCountFilter;
 
     @Bean
     public SecurityFilterChain filterChain(@NotNull HttpSecurity http) throws Exception {
@@ -75,6 +79,7 @@ public class SecurityConfiguration {
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterAfter(invokeCountFilter, AuthorizationFilter.class)
                 .build();
     }
 

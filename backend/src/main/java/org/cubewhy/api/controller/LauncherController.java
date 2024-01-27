@@ -57,7 +57,6 @@ public class LauncherController {
         // return download url
         // Find at <configDir>/<branch>/<version>-<module>.json
         // 拼接下载链接
-        counter.addCount("launcher/launch");
 
         InputStream stream = fileUtils.getExternalFile(branchesFolder + String.format("/%s/%s-%s.json", info.getBranch(), info.getVersion(), info.getModule()));
         if (stream != null) {
